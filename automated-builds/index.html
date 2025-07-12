@@ -1,0 +1,634 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Automated builds - Continuous Delivery Metric Model</title>
+<meta name="description" content="When code changes are committed to the repository, your CI server kicks in automatically and starts a build.">
+
+
+  <meta name="author" content="Lars Kruse">
+  
+  <meta property="article:author" content="Lars Kruse">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Continuous Delivery Metric Model">
+<meta property="og:title" content="Automated builds">
+<meta property="og:url" content="https://codememo.lakruzz.com/automated-builds/">
+
+
+  <meta property="og:description" content="When code changes are committed to the repository, your CI server kicks in automatically and starts a build.">
+
+
+
+  <meta property="og:image" content="https://codememo.lakruzz.com/assets/images/cards/automated-builds.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2025-07-12T16:38:16+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://codememo.lakruzz.com/automated-builds/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Continuous Delivery Metric Model",
+      "url": "https://codememo.lakruzz.com/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Continuous Delivery Metric Model Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="https://kit.fontawesome.com/17b5a92563.js" crossorigin="anonymous"></script>
+
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--model-card-single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/lakruzz-logo.png" alt="Continuous Delivery Metric Model"></a>
+        
+        <a class="site-title" href="/">
+          Continuous Delivery Metric Model
+          <span class="site-subtitle">Software as a Factory</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/score/">Score</a>
+            </li><li class="masthead__menu-item">
+              <a href="/gauges/">Gauges</a>
+            </li><li class="masthead__menu-item">
+              <a href="/stories/">Stories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about-model/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">💬</a>
+            </li><li class="masthead__menu-item">
+              <a href="/terms/">🍪</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Automated builds">
+    <meta itemprop="description" content="When code changes are committed to the repository, your CI server kicks in automatically and starts a build.">
+    <meta itemprop="datePublished" content="2025-07-12T16:38:16+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://codememo.lakruzz.com/automated-builds/" class="u-url" itemprop="url">Automated builds
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        
+
+
+
+<article class="layout-card">
+
+
+
+  <div class="card-header">
+    <div>
+
+      <div class="card_">
+        Automated builds
+        <div class="bg area-80                  " style="opacity: 0.6;"></div>
+      </div>
+  
+      <div class="details">
+        
+        <!--       2 3 2 2   
+-->
+        <!--"       2 3 2 2   \n"-->
+        
+        
+        
+        
+        
+        
+        
+          <div class="gauges">
+            <div class="gauge">Throughput 
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+</div>
+            <div class="gauge">Feedback   
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> </span>
+  </div>
+            <div class="gauge">Payback    
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+   </div>
+            <div class="gauge">Complexity 
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+</div>
+            <div class="score">
+              Score
+              <span class="value">
+              
+                7
+              
+              </span>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="model-tags">
+      <div class="model-tag area">
+        <a href="/areas/build/#tag"  class="area-80                  " style="color: white;">
+                      Build
+        </a>
+      </div>
+      <div class="model-tag level">
+        <a href="/levels/novice/#tag" style="background: #444; opacity: 0.6;">
+          Novice
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="content">
+      <div class="caption">Yes. But it doesn't build on THAT machine.</div>
+    <p>When code changes are committed to the repository, your CI server kicks in automatically and starts a build.</p>
+
+<p>It might not even be an actual <em>build</em>, it can be any kind of automated action that is part of a verification process implied in the project’s “definition of done”.</p>
+
+<p>If a build step fails, the developer is notified directly so he can start working on fixing the issue immediately. The shorter the feedback loop, the better.</p>
+
+  </div>
+
+  
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+      <!-- markdownlint-disable MD041 -->
+<p><strong><em>Note:<br />The following is a curated mix of illustrative findings from various anonymized reports</em></strong></p>
+
+<h2 id="it-builds-on-my-machine">It builds on <em>my</em> machine</h2>
+
+<p>Builds and tests run on individual developer’s self-maintained machines and workspaces, as no standard image for this exists.
+This results in an undesirable <em>“Well, it works on my machine”</em> scenario. One developer can have a hard time redoing another developer’s work. The team suffers from a lot of <em>false negatives</em>. Builds fail often. Not because the code is broken, but because the build environment is.</p>
+
+<h3 id="use-a-clean-standardized-image-for-the-toll-gate-job">Use a clean standardized image for the toll gate job</h3>
+
+<p>Code changes should be built and tested on a standard and <em>clean</em> image. The image should be maintained by the team.
+This prevents local configuration from tampering with the builds, making them deterministic and consistent.</p>
+
+<h4 id="developers-use-reference-image">Developers use reference image</h4>
+
+<p>Ideally, there should be no difference between a developer’s environment and that of the toll gate.
+This is achieved by making it easy for developers to spin up the standard image to run their builds, allowing them to <a href="/on-demand-environments/" title="Access to production-like environments">easily produce the same result</a> as the toll gate job.</p>
+
+<h2 id="final-delivery-to-customer-is-not-automated">Final delivery to customer is not automated</h2>
+
+<p>The image given to the customer is generated before final test in a non-reproducible way.
+It is built manually based on an already running device with an other, older image.
+It is modified by manipulating files within the device before a final image snapshot.
+Conceptually the image could be broken during the creation process.</p>
+
+<h3 id="automate-image-creation">Automate image creation</h3>
+
+<p>Any release artifact should always be possible to reproduce without any doubt.
+It should be scripted 100%. Programmable and immutable.</p>
+
+<h3 id="make-the-image-generation-stateless">Make the image generation stateless</h3>
+
+<p>A product to a customer should always be generated from scratch in order not to propagate error prone states.
+It should also always be reproducible through a declarative pipeline.</p>
+
+<h4 id="automatically-test-the-image">Automatically test the image</h4>
+
+<p>The automatically generated image is tested as part of a pipeline.
+You want to extend the pipeline as far down the release process as possible.</p>
+
+<h2 id="release-process-is-to-a-large-extent-manual">Release process is, to a large extent, manual</h2>
+
+<p>The majority of the release process located in the <em>Front Office</em> is a manual one, which is costly, lengthy and error prone, e.g. the image creation, release notes, support site updates, etc.</p>
+
+<h3 id="design-the-release-process-for-automation">Design the release process for automation</h3>
+
+<p>It is important that each step is designed for automation.
+Make sure the physical resource are available and enabled for automatic deployment.
+It relates to servers, but also devices that they can be claimed, started and the execution evaluated.</p>
+
+<h3 id="script-each-single-step-to-enable-automatic-execution">Script each single step to enable automatic execution</h3>
+
+<p>Identify the process steps that are manual, entirely or even partially so.
+Automate step by step and integrate them into the pipeline.</p>
+
+<h2 id="build-script-is-an-plaster-on-the-monolith">Build script is an plaster on the monolith</h2>
+<!-- cspell:ignore Scons -->
+<p>The build script is created to handle the monolith by plastering each of the subsystem builds into a single step.
+The different subsystems have different build technologies (e.g. Maven and Scons), but in order to make it all work as a monolith it is wrapped with shell script.</p>
+
+<h3 id="split-the-monolith-and-add-dependency-management-of-the-artifacts">Split the monolith and add dependency management of the artifacts</h3>
+
+<p>Splitting the monolith into subsystems and implementing true dependency management makes the build script obsolete.
+It simply vanishes. Please refer to the <a href="/areas/arch/#tag" title="Architecture &amp; Design">architecture cards</a> for more information.</p>
+
+<h3 id="localization-files-are-introduced-late-in-the-release-process-leading-to-unexpected-ui-changes">Localization files are introduced late in the release process, leading to unexpected UI changes</h3>
+
+<p>Localized text in the UI can cause the UI controls to change in some unexpected manner, e.g. resizing of buttons due to translated texts being longer than their original.
+<em>Commit-stop</em> is the point where no further features, and thus no new text, gets added.
+Translation can take up to one month and arrives fairly late in the release process.</p>
+
+<h4 id="create-requirements-for-localization-subcontractor">Create requirements for localization subcontractor</h4>
+
+<p>Create criteria or a framework that helps these text translators adhere to font type, font size, etc.
+This gives them the opportunity to react early and discuss with you any problematic translations.</p>
+
+<p>This will minimize, or even completely avoid, nasty surprises near the end of the release process.</p>
+
+<h3 id="manual-process-to-create-a-buildable-workspace">Manual process to create a buildable workspace</h3>
+
+<p>It is not possible to start building from a clean checkout.
+You have to checkout two repositories and create a symlink in order to be able to build the software.
+It is a hidden dependency.</p>
+
+<h4 id="make-the-link-permanent-by-using-a-explicit-dependency">Make the ‘link’ permanent by using a explicit dependency</h4>
+
+<p>Create a ‘thin shell’ repository which contains the dependency between these repositories.
+In SVN it is called an <em>external</em>, in Git it is called <em>submodules</em>.
+You could also pull the dependencies from Artifact Management system if the repositories have their own pipeline and definition of done.
+The implementation depends on the technology. The important point is the dependencies are managed and versioned.</p>
+
+<h3 id="the-pipeline-scripts-contain-domain-specific-logic">The pipeline scripts contain domain specific logic</h3>
+
+<p>Your pipeline scripts are bloated with domain specific logic and setup.
+Much of the script relates to setting up environments and requirements to build the software.
+The pipeline scripts become large and unmanageable.</p>
+
+<h4 id="keep-domain-logic-out-of-pipeline-scripts">Keep domain logic out of pipeline scripts</h4>
+
+<p>Consider your pipeline definition as <em>configuration</em> rather than <em>a script</em> to help keep it lean.
+Avoid building logic into the pipeline script that has nothing to do with either CI system’s interface, execution or reporting.
+Remember that all the logic you put in these scripts is also something developers would need to run at their desk, should they want to recreate runs locally.
+The pipeline script makes for a poor place to document these setup steps</p>
+
+    
+  
+
+  
+  
+    
+    
+  
+
+
+
+
+  
+
+  
+  
+  
+  <script>
+  document.body.onkeyup = function(e){
+  if (e.keyCode == '37') { window.location = '/artifacts-are-managed/'; }
+  if (e.keyCode == '39') { window.location = '/automated-release-notes/'; }
+  if (e.keyCode == '85') { window.location = '/'; }
+  };
+  </script>
+  <div class="nav-prev-next">
+    
+      <a href="/artifacts-are-managed/" class="prev" title="Press ← on keyboard">
+        <div class="wrapper">
+          <span class="title">Artifacts are managed</span>
+        </div>
+      </a>
+    
+    
+      <a href="/automated-release-notes/" class="next" title="Press → on keyboard">
+        <div class="wrapper">
+          <span class="title">Automated release notes</span>
+        </div>
+      </a>
+    
+  </div>
+
+</article>
+
+<script>
+  var flash = function(elements) {
+    var opacity = 100;
+    var color = "255,232,87";
+    var interval = setInterval(function() {
+      opacity -= 3;
+      if (opacity <= 0) clearInterval(interval);
+      $(elements).css({background: "rgba("+color+", "+opacity/100+")"});
+    }, 60);
+  };
+
+  var hash = window.location.hash;
+  console.log(hash);
+  if(hash){
+    flash($(hash));
+  }
+</script>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-07-12T16:38:16+00:00">July 12, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+ 
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/lakruzz" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/lakruzz" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+ <div class="page__footer-copyright">&copy; 2025 Continuous Delivery Metric Model
+    
+      —  Powered by <a href="https://www.lakruzz.com" target="_blank" rel="nofollow">Lakruzz</a></div>
+    
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    <style>
+    #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: 100%; background: #942323; color: rgba(255,255,255,0.8);}
+    #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+<div id="cookie-notice">
+    <span>
+        Say <em>"Yes!"</em> to cookies 
+    </span>
+    <a id="cookie-notice-accept" class="btn btn--success">
+        🍪💪 Yes 
+    </a>
+    &nbsp;&nbsp;We're not evil, we <em>never</em>  track PII data
+    <a href="/terms/" class="btn btn--warning">
+        😈 Read our terms 
+    </a>
+</div>
+
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+        // Remove GTM script from the header
+        var gtmScripts = document.querySelectorAll('script[src*="googletagmanager.com/gtag/js"]');
+        gtmScripts.forEach(function(script) {
+            script.parentNode.removeChild(script);
+        });
+    }
+
+    if(readCookie('cookie-notice-dismissed')=='true') {
+
+        
+        
+    } else {
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-dismissed','true',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
+</script>
+
+    
+  </body>
+</html>

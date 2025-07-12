@@ -1,0 +1,568 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Gauges - Continuous Delivery Metric Model</title>
+<meta name="description" content="Throughput                                                               The speed of the pipeline                          An interesting measure to focus on is simply speed or throughput. The time it takes from a developer proudly shouting “It works on my computer!” to it actually working on the end user’s computer.  For each card ask yourself the following question:     To what extent would implementing this feature or ability improve the overall throughput of my pipeline?   The feedback is measured from one to three stars. Use the stars as follows:       The improvement can be counted in minutes.       The improvement can be counted in hours.       The improvement can be counted in days.                                                                                                      Feedback                                                               Reflection in action needs a voice                          Continuous attention to your surroundings will provide you with the means for you to reflect upon your current situation. Think - and then improve it.  Feedback can be in the form of logs, data, graphs, statistics, analysis, discussions with customers or colleagues - Anything that gives your surroundings a voice.  If your Continuous Delivery ecosystem or your application isn’t talking to you, then you’re trying to move forward while blindfolded, in the dark.  Give your surroundings a voice.  For each card ask yourself the following question:     To what extent would implementing this feature or ability provide more feedback or visibility to the responsible worker and his colleagues?   The feedback is measured from one to three stars. Use the stars as follows:       It sporadically affects the developer at an individual level.       It affects the entire team and collaboration.       It affects us, beyond the project, at a corporate level.                                                                                                      Payback                                                               The payment to your technical debt                          For most software projects it’s the code’s complexity and technical debt that eventually makes it obsolete.  Every time we touch the code, we’re jeopardizing the original design and quality. Either by adding quick solutions that don’t scale or because we simply don’t add non-functional ‘abilities’ to the solution.  Testability, traceability, maintainability, supportability, readability… These kinds of abilities.  We’re building up technical debt - debt that will have to be paid back or you’ll end up broke.  For each card ask yourself the following question:     To what extent would implementing this feature or ability help to pay back on technical debt or actively prevent more debt from being added?   The payback is measured from one to three stars. Use the stars as follows:       It sporadically affects code snippets at an individual level.       It affects design at a team collaboration level.       It affects architecture at a corporate asset level.                                                                                                      Complexity                                                               The simpler it is to implement the higher the gain                          Complexity is everywhere.  In a standard approach to software development, complexity is the meter that influences all others.  The simpler a solution is to implement, the faster the Return On Investment.  For each card ask yourself the following question:     What would be required to implement this feature or ability, taking into account man hours, money spent up front, and ongoing cost of ownership?        The first level of complexity is something an individual can do within project scope. It’s marked as a low hanging fruit .       The second level of complexity is something that can be achieved as a team effort, still within a project scope. It’s marked as a team effort .       The third and highest level of complexity is something than can only be achieved with permission and funding from the line-organization. It’s too big for the project to handle within it’s own means and resources. It’s marked as a mountain to climb  .                                                                                                      Score                                                               Adding priority to the cards                          The card score is calculated based on the values of the gauges.  The algorithm used is:  (throughput + feedback + payback)   Each card is also assessed for complexity, you should pay attention to the cost of implementation:   It’s a low hanging fruit.   It’s as a team effort.   It’s a mountain to climb.">
+
+
+  <meta name="author" content="Lars Kruse">
+  
+  <meta property="article:author" content="Lars Kruse">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Continuous Delivery Metric Model">
+<meta property="og:title" content="Gauges">
+<meta property="og:url" content="https://codememo.lakruzz.com/gauges/">
+
+
+  <meta property="og:description" content="Throughput                                                               The speed of the pipeline                          An interesting measure to focus on is simply speed or throughput. The time it takes from a developer proudly shouting “It works on my computer!” to it actually working on the end user’s computer.  For each card ask yourself the following question:     To what extent would implementing this feature or ability improve the overall throughput of my pipeline?   The feedback is measured from one to three stars. Use the stars as follows:       The improvement can be counted in minutes.       The improvement can be counted in hours.       The improvement can be counted in days.                                                                                                      Feedback                                                               Reflection in action needs a voice                          Continuous attention to your surroundings will provide you with the means for you to reflect upon your current situation. Think - and then improve it.  Feedback can be in the form of logs, data, graphs, statistics, analysis, discussions with customers or colleagues - Anything that gives your surroundings a voice.  If your Continuous Delivery ecosystem or your application isn’t talking to you, then you’re trying to move forward while blindfolded, in the dark.  Give your surroundings a voice.  For each card ask yourself the following question:     To what extent would implementing this feature or ability provide more feedback or visibility to the responsible worker and his colleagues?   The feedback is measured from one to three stars. Use the stars as follows:       It sporadically affects the developer at an individual level.       It affects the entire team and collaboration.       It affects us, beyond the project, at a corporate level.                                                                                                      Payback                                                               The payment to your technical debt                          For most software projects it’s the code’s complexity and technical debt that eventually makes it obsolete.  Every time we touch the code, we’re jeopardizing the original design and quality. Either by adding quick solutions that don’t scale or because we simply don’t add non-functional ‘abilities’ to the solution.  Testability, traceability, maintainability, supportability, readability… These kinds of abilities.  We’re building up technical debt - debt that will have to be paid back or you’ll end up broke.  For each card ask yourself the following question:     To what extent would implementing this feature or ability help to pay back on technical debt or actively prevent more debt from being added?   The payback is measured from one to three stars. Use the stars as follows:       It sporadically affects code snippets at an individual level.       It affects design at a team collaboration level.       It affects architecture at a corporate asset level.                                                                                                      Complexity                                                               The simpler it is to implement the higher the gain                          Complexity is everywhere.  In a standard approach to software development, complexity is the meter that influences all others.  The simpler a solution is to implement, the faster the Return On Investment.  For each card ask yourself the following question:     What would be required to implement this feature or ability, taking into account man hours, money spent up front, and ongoing cost of ownership?        The first level of complexity is something an individual can do within project scope. It’s marked as a low hanging fruit .       The second level of complexity is something that can be achieved as a team effort, still within a project scope. It’s marked as a team effort .       The third and highest level of complexity is something than can only be achieved with permission and funding from the line-organization. It’s too big for the project to handle within it’s own means and resources. It’s marked as a mountain to climb  .                                                                                                      Score                                                               Adding priority to the cards                          The card score is calculated based on the values of the gauges.  The algorithm used is:  (throughput + feedback + payback)   Each card is also assessed for complexity, you should pay attention to the cost of implementation:   It’s a low hanging fruit.   It’s as a team effort.   It’s a mountain to climb.">
+
+
+
+  <meta property="og:image" content="https://codememo.lakruzz.com/assets/images/cards/codememo.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2025-07-12T16:38:16+00:00">
+
+
+
+  <meta property="article:modified_time" content="2019-07-01T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://codememo.lakruzz.com/gauges/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Continuous Delivery Metric Model",
+      "url": "https://codememo.lakruzz.com/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Continuous Delivery Metric Model Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="https://kit.fontawesome.com/17b5a92563.js" crossorigin="anonymous"></script>
+
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--model-page-single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/lakruzz-logo.png" alt="Continuous Delivery Metric Model"></a>
+        
+        <a class="site-title" href="/">
+          Continuous Delivery Metric Model
+          <span class="site-subtitle">Software as a Factory</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/score/">Score</a>
+            </li><li class="masthead__menu-item">
+              <a href="/gauges/">Gauges</a>
+            </li><li class="masthead__menu-item">
+              <a href="/stories/">Stories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about-model/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">💬</a>
+            </li><li class="masthead__menu-item">
+              <a href="/terms/">🍪</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Gauges">
+    <meta itemprop="description" content="                                                                    Throughput                                                          The speed of the pipeline                        An interesting measure to focus on is simply speed or throughput.The time it takes from a developer proudly shouting “It works on my computer!” to it actually working on the end user’s computer.For each card ask yourself the following question:  To what extent would implementing this feature or ability improve the overall throughput of my pipeline?The feedback is measured from one to three stars. Use the stars as follows:   The improvement can be counted in minutes.   The improvement can be counted in hours.   The improvement can be counted in days.                                                                                          Feedback                                                          Reflection in action needs a voice                        Continuous attention to your surroundings will provide you with the means for you to reflect upon your current situation. Think - and then improve it.Feedback can be in the form of logs, data, graphs, statistics, analysis, discussions with customers or colleagues - Anything that gives your surroundings a voice.If your Continuous Delivery ecosystem or your application isn’t talking to you, then you’re trying to move forward while blindfolded, in the dark.Give your surroundings a voice.For each card ask yourself the following question:  To what extent would implementing this feature or ability provide more feedback or visibility to the responsible worker and his colleagues?The feedback is measured from one to three stars. Use the stars as follows:   It sporadically affects the developer at an individual level.   It affects the entire team and collaboration.   It affects us, beyond the project, at a corporate level.                                                                                          Payback                                                          The payment to your technical debt                        For most software projects it’s the code’s complexity and technical debt that eventually makes it obsolete.Every time we touch the code, we’re jeopardizing the original design and quality.Either by adding quick solutions that don’t scale or because we simply don’t add non-functional ‘abilities’ to the solution.Testability, traceability, maintainability, supportability, readability… These kinds of abilities.We’re building up technical debt - debt that will have to be paid back or you’ll end up broke.For each card ask yourself the following question:  To what extent would implementing this feature or ability help to pay back on technical debt or actively prevent more debt from being added?The payback is measured from one to three stars. Use the stars as follows:   It sporadically affects code snippets at an individual level.   It affects design at a team collaboration level.   It affects architecture at a corporate asset level.                                                                                          Complexity                                                          The simpler it is to implement the higher the gain                        Complexity is everywhere.In a standard approach to software development, complexity is the meter that influences all others.The simpler a solution is to implement, the faster the Return On Investment.For each card ask yourself the following question:  What would be required to implement this feature or ability, taking into account man hours, money spent up front, and ongoing cost of ownership?    The first level of complexity is something an individual can do within project scope. It’s marked as a low hanging fruit .    The second level of complexity is something that can be achieved as a team effort, still within a project scope. It’s marked as a team effort .    The third and highest level of complexity is something than can only be achieved with permission and funding from the line-organization. It’s too big for the project to handle within it’s own means and resources. It’s marked as a mountain to climb  .                                                                                          Score                                                          Adding priority to the cards                        The card score is calculated based on the values of the gauges.The algorithm used is:(throughput + feedback + payback)Each card is also assessed for complexity, you should pay attention to the cost of implementation: It’s a low hanging fruit. It’s as a team effort. It’s a mountain to climb.                              ">
+    <meta itemprop="datePublished" content="2025-07-12T16:38:16+00:00">
+    <meta itemprop="dateModified" content="2019-07-01T00:00:00+00:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://codememo.lakruzz.com/gauges/" class="u-url" itemprop="url">Gauges
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <main role="main" >
+  <article>
+    
+
+<div class="layout--model-page-single">
+  <section>
+    
+      <article>
+        <!--<a href="/gauges/throughput/">-->
+          <!--<img src="" alt="Throughput">-->
+        <!--</a>-->
+        <div class="caption">
+          <h2>
+            Throughput
+          </h2>
+          <p>
+            
+            <div class="caption">
+              The speed of the pipeline
+            </div>
+            <p>An interesting measure to focus on is simply speed or throughput.
+The time it takes from a developer proudly shouting “It works on my computer!” to it actually working on the end user’s computer.</p>
+
+<p>For each card ask yourself the following question:</p>
+
+<blockquote>
+  <p>To what extent would implementing this feature or ability improve the overall throughput of my pipeline?</p>
+</blockquote>
+
+<p>The feedback is measured from one to three stars. Use the stars as follows:</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span></p>
+
+<p>The improvement can be counted in <em>minutes</em>.</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span></p>
+
+<p>The improvement can be counted in <em>hours</em>.</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> </span></p>
+
+<p>The improvement can be counted in <em>days</em>.</p>
+
+          </p>
+        </div>
+      </article>
+    
+      <article>
+        <!--<a href="/gauges/feedback/">-->
+          <!--<img src="" alt="Feedback">-->
+        <!--</a>-->
+        <div class="caption">
+          <h2>
+            Feedback
+          </h2>
+          <p>
+            
+            <div class="caption">
+              Reflection in action needs a voice
+            </div>
+            <p>Continuous attention to your surroundings will provide you with the means for you to reflect upon your current situation. Think - and then improve it.</p>
+
+<p>Feedback can be in the form of logs, data, graphs, statistics, analysis, discussions with customers or colleagues - Anything that gives your surroundings a voice.</p>
+
+<p>If your Continuous Delivery ecosystem or your application isn’t <em>talking</em> to you, then you’re trying to move forward while blindfolded, in the dark.</p>
+
+<p>Give your surroundings a voice.</p>
+
+<p>For each card ask yourself the following question:</p>
+
+<blockquote>
+  <p>To what extent would implementing this feature or ability provide more feedback or visibility to the responsible worker and his colleagues?</p>
+</blockquote>
+
+<p>The feedback is measured from one to three stars. Use the stars as follows:</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span></p>
+
+<p>It sporadically affects the developer at an individual level.</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span></p>
+
+<p>It affects the entire team and collaboration.</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> </span></p>
+
+<p>It affects us, beyond the project, at a corporate level.</p>
+
+          </p>
+        </div>
+      </article>
+    
+      <article>
+        <!--<a href="/gauges/payback/">-->
+          <!--<img src="" alt="Payback">-->
+        <!--</a>-->
+        <div class="caption">
+          <h2>
+            Payback
+          </h2>
+          <p>
+            
+            <div class="caption">
+              The payment to your technical debt
+            </div>
+            <p>For most software projects it’s the code’s complexity and technical debt that eventually makes it obsolete.</p>
+
+<p>Every time we touch the code, we’re jeopardizing the original design and quality.
+Either by adding quick solutions that don’t scale or because we simply don’t add non-functional ‘abilities’ to the solution.</p>
+
+<p>Testability, traceability, maintainability, supportability, readability… These kinds of abilities.</p>
+
+<p>We’re building up technical debt - debt that will have to be paid back or you’ll end up broke.</p>
+
+<p>For each card ask yourself the following question:</p>
+
+<blockquote>
+  <p>To what extent would implementing this feature or ability help to pay back on technical debt or actively prevent more debt from being added?</p>
+</blockquote>
+
+<p>The payback is measured from one to three stars. Use the stars as follows:</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span></p>
+
+<p>It sporadically affects <em>code snippets</em> at an individual level.</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span></p>
+
+<p>It affects <em>design</em> at a team collaboration level.</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> </span></p>
+
+<p>It affects <em>architecture</em> at a corporate asset level.</p>
+
+          </p>
+        </div>
+      </article>
+    
+      <article>
+        <!--<a href="/gauges/simplicity/">-->
+          <!--<img src="" alt="Complexity">-->
+        <!--</a>-->
+        <div class="caption">
+          <h2>
+            Complexity
+          </h2>
+          <p>
+            
+            <div class="caption">
+              The simpler it is to implement the higher the gain
+            </div>
+            <p>Complexity is everywhere.</p>
+
+<p>In a standard approach to software development, complexity is the meter that influences all others.</p>
+
+<p>The simpler a solution is to implement, the faster the <em>Return On Investment</em>.</p>
+
+<p>For each card ask yourself the following question:</p>
+
+<blockquote>
+  <p>What would be required to implement this feature or ability, taking into account man hours, money spent up front, and ongoing cost of ownership?</p>
+</blockquote>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+ The first level of complexity is something an individual can do within project scope. It’s marked as a low hanging fruit <i class="fa-solid fa-apple-whole"></i>.</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+ The second level of complexity is something that can be achieved as a team effort, still within a project scope. It’s marked as a team effort <i class="fa-solid fa-user-group"></i>.</p>
+
+<p><span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> </span>
+ The third and highest level of complexity is something than can only be achieved with permission and funding from the line-organization. It’s too big for the project to handle within it’s own means and resources. It’s marked as a mountain to climb <i class="fa-solid fa-mountain-sun"></i> .</p>
+
+          </p>
+        </div>
+      </article>
+    
+      <article>
+        <!--<a href="/gauges/score/">-->
+          <!--<img src="" alt="Score">-->
+        <!--</a>-->
+        <div class="caption">
+          <h2>
+            Score
+          </h2>
+          <p>
+            
+            <div class="caption">
+              Adding priority to the cards
+            </div>
+            <p>The card score is calculated based on the values of the gauges.</p>
+
+<p>The algorithm used is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(throughput + feedback + payback)
+</code></pre></div></div>
+
+<p>Each card is also assessed for complexity, you should pay attention to the cost of implementation:</p>
+
+<p><i class="fa-solid fa-apple-whole"></i> It’s a low hanging fruit.</p>
+
+<p><i class="fa-solid fa-user-group"></i> It’s as a team effort.</p>
+
+<p><i class="fa-solid fa-mountain-sun"></i> It’s a mountain to climb.</p>
+
+          </p>
+        </div>
+      </article>
+    
+  </section>
+</div>
+
+  </article>
+</main>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2019-07-01">July 1, 2019</time></p>
+
+      </footer>
+
+      
+
+      
+ 
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/lakruzz" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/lakruzz" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+ <div class="page__footer-copyright">&copy; 2025 Continuous Delivery Metric Model
+    
+      —  Powered by <a href="https://www.lakruzz.com" target="_blank" rel="nofollow">Lakruzz</a></div>
+    
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    <style>
+    #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: 100%; background: #942323; color: rgba(255,255,255,0.8);}
+    #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+<div id="cookie-notice">
+    <span>
+        Say <em>"Yes!"</em> to cookies 
+    </span>
+    <a id="cookie-notice-accept" class="btn btn--success">
+        🍪💪 Yes 
+    </a>
+    &nbsp;&nbsp;We're not evil, we <em>never</em>  track PII data
+    <a href="/terms/" class="btn btn--warning">
+        😈 Read our terms 
+    </a>
+</div>
+
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+        // Remove GTM script from the header
+        var gtmScripts = document.querySelectorAll('script[src*="googletagmanager.com/gtag/js"]');
+        gtmScripts.forEach(function(script) {
+            script.parentNode.removeChild(script);
+        });
+    }
+
+    if(readCookie('cookie-notice-dismissed')=='true') {
+
+        
+        
+    } else {
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-dismissed','true',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
+</script>
+
+    
+  </body>
+</html>

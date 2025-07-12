@@ -1,0 +1,1280 @@
+<p>The findings and recommendations have mainly been picked up throughout the interviews and workshops. We conducted this part as targeted group interviews focusing on the 6 main areas of the metric model.</p>
+
+<p>On the first day, after the initial Continuous Delivery presentation, we had an exercise where all attendees together were asked to illustrate the process from the point where a requirement or a change request arrives until the implemented result can be accessed by the end-users.</p>
+
+<p>The participants were also equipped with stickers with 6 different pictograms representing: Wait state, unplanned work, manual work, conflicts, queued work and anything that needs repair.</p>
+
+<p>The result was discussed during the workshop and then used as a reference point during the various discussions on the following day.</p>
+
+<!--TODO: add a picture from the workshop -->
+
+<h2 id="build">Build</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+          
+          <article>
+            
+            
+              <div class="content layout-card">
+                
+                
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+      <!-- markdownlint-disable MD041 -->
+<p><strong><em>Note:<br />The following is a curated mix of illustrative findings from various anonymized reports</em></strong></p>
+
+<h2 id="it-builds-on-my-machine">It builds on <em>my</em> machine</h2>
+
+<p>Builds and tests run on individual developer’s self-maintained machines and workspaces, as no standard image for this exists.
+This results in an undesirable <em>“Well, it works on my machine”</em> scenario. One developer can have a hard time redoing another developer’s work. The team suffers from a lot of <em>false negatives</em>. Builds fail often. Not because the code is broken, but because the build environment is.</p>
+
+<h3 id="use-a-clean-standardized-image-for-the-toll-gate-job">Use a clean standardized image for the toll gate job</h3>
+
+<p>Code changes should be built and tested on a standard and <em>clean</em> image. The image should be maintained by the team.
+This prevents local configuration from tampering with the builds, making them deterministic and consistent.</p>
+
+<h4 id="developers-use-reference-image">Developers use reference image</h4>
+
+<p>Ideally, there should be no difference between a developer’s environment and that of the toll gate.
+This is achieved by making it easy for developers to spin up the standard image to run their builds, allowing them to <a href="/on-demand-environments/" title="Access to production-like environments">easily produce the same result</a> as the toll gate job.</p>
+
+<h2 id="final-delivery-to-customer-is-not-automated">Final delivery to customer is not automated</h2>
+
+<p>The image given to the customer is generated before final test in a non-reproducible way.
+It is built manually based on an already running device with an other, older image.
+It is modified by manipulating files within the device before a final image snapshot.
+Conceptually the image could be broken during the creation process.</p>
+
+<h3 id="automate-image-creation">Automate image creation</h3>
+
+<p>Any release artifact should always be possible to reproduce without any doubt.
+It should be scripted 100%. Programmable and immutable.</p>
+
+<h3 id="make-the-image-generation-stateless">Make the image generation stateless</h3>
+
+<p>A product to a customer should always be generated from scratch in order not to propagate error prone states.
+It should also always be reproducible through a declarative pipeline.</p>
+
+<h4 id="automatically-test-the-image">Automatically test the image</h4>
+
+<p>The automatically generated image is tested as part of a pipeline.
+You want to extend the pipeline as far down the release process as possible.</p>
+
+<h2 id="release-process-is-to-a-large-extent-manual">Release process is, to a large extent, manual</h2>
+
+<p>The majority of the release process located in the <em>Front Office</em> is a manual one, which is costly, lengthy and error prone, e.g. the image creation, release notes, support site updates, etc.</p>
+
+<h3 id="design-the-release-process-for-automation">Design the release process for automation</h3>
+
+<p>It is important that each step is designed for automation.
+Make sure the physical resource are available and enabled for automatic deployment.
+It relates to servers, but also devices that they can be claimed, started and the execution evaluated.</p>
+
+<h3 id="script-each-single-step-to-enable-automatic-execution">Script each single step to enable automatic execution</h3>
+
+<p>Identify the process steps that are manual, entirely or even partially so.
+Automate step by step and integrate them into the pipeline.</p>
+
+<h2 id="build-script-is-an-plaster-on-the-monolith">Build script is an plaster on the monolith</h2>
+<!-- cspell:ignore Scons -->
+<p>The build script is created to handle the monolith by plastering each of the subsystem builds into a single step.
+The different subsystems have different build technologies (e.g. Maven and Scons), but in order to make it all work as a monolith it is wrapped with shell script.</p>
+
+<h3 id="split-the-monolith-and-add-dependency-management-of-the-artifacts">Split the monolith and add dependency management of the artifacts</h3>
+
+<p>Splitting the monolith into subsystems and implementing true dependency management makes the build script obsolete.
+It simply vanishes. Please refer to the <a href="/areas/arch/#tag" title="Architecture &amp; Design">architecture cards</a> for more information.</p>
+
+<h3 id="localization-files-are-introduced-late-in-the-release-process-leading-to-unexpected-ui-changes">Localization files are introduced late in the release process, leading to unexpected UI changes</h3>
+
+<p>Localized text in the UI can cause the UI controls to change in some unexpected manner, e.g. resizing of buttons due to translated texts being longer than their original.
+<em>Commit-stop</em> is the point where no further features, and thus no new text, gets added.
+Translation can take up to one month and arrives fairly late in the release process.</p>
+
+<h4 id="create-requirements-for-localization-subcontractor">Create requirements for localization subcontractor</h4>
+
+<p>Create criteria or a framework that helps these text translators adhere to font type, font size, etc.
+This gives them the opportunity to react early and discuss with you any problematic translations.</p>
+
+<p>This will minimize, or even completely avoid, nasty surprises near the end of the release process.</p>
+
+<h3 id="manual-process-to-create-a-buildable-workspace">Manual process to create a buildable workspace</h3>
+
+<p>It is not possible to start building from a clean checkout.
+You have to checkout two repositories and create a symlink in order to be able to build the software.
+It is a hidden dependency.</p>
+
+<h4 id="make-the-link-permanent-by-using-a-explicit-dependency">Make the ‘link’ permanent by using a explicit dependency</h4>
+
+<p>Create a ‘thin shell’ repository which contains the dependency between these repositories.
+In SVN it is called an <em>external</em>, in Git it is called <em>submodules</em>.
+You could also pull the dependencies from Artifact Management system if the repositories have their own pipeline and definition of done.
+The implementation depends on the technology. The important point is the dependencies are managed and versioned.</p>
+
+<h3 id="the-pipeline-scripts-contain-domain-specific-logic">The pipeline scripts contain domain specific logic</h3>
+
+<p>Your pipeline scripts are bloated with domain specific logic and setup.
+Much of the script relates to setting up environments and requirements to build the software.
+The pipeline scripts become large and unmanageable.</p>
+
+<h4 id="keep-domain-logic-out-of-pipeline-scripts">Keep domain logic out of pipeline scripts</h4>
+
+<p>Consider your pipeline definition as <em>configuration</em> rather than <em>a script</em> to help keep it lean.
+Avoid building logic into the pipeline script that has nothing to do with either CI system’s interface, execution or reporting.
+Remember that all the logic you put in these scripts is also something developers would need to run at their desk, should they want to recreate runs locally.
+The pipeline script makes for a poor place to document these setup steps</p>
+
+    
+  
+
+  
+  
+    
+    
+  
+
+
+              </div>
+            
+          </article>
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+          
+          <article>
+            
+            
+              <div class="content layout-card">
+                
+                
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+      <!-- markdownlint-disable MD041 -->
+<p><strong><em>Note:<br />The following is a curated mix of illustrative findings from various anonymized reports</em></strong></p>
+
+<h3 id="artifact-management-system-configuration-not-optimal">Artifact management system configuration not optimal</h3>
+
+<p>The setup used in Artifact management is not as the tool is designed and intended for.
+The intended root structure is <em>projects</em> and on top of that a semantic structure with package and semantic version below.
+The current setup abuses the root structure as it is both the project and version which means that newcomers are confused and the root structure is polluted and grows as more releases are produced. The structure you’ve set up requires advanced logic in your build scripts rather than just simple SemVer logic.</p>
+
+<h4 id="implement-best-practice-structure">Implement best practice structure</h4>
+
+<p>Store the artifacts in a hierarchical tree structure.
+It should also be done for non-Java artifacts if there is no explicit reason to not do so.
+Always respect the intent of a tool. Read the manual again, follow some of the tutorials for the tool.
+It will make the automation of the dependency management less complex if there is a consistent structure for addressing the artifacts.</p>
+
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+  
+
+
+              </div>
+            
+          </article>
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+          
+          <article>
+            
+            
+              <div class="content layout-card">
+                
+                
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+      <!-- markdownlint-disable MD041 -->
+<p><strong><em>Note:<br />The following is a curated mix of illustrative findings from various anonymized reports</em></strong></p>
+
+<h3 id="release-notes-are-manually-created">Release Notes are manually created</h3>
+
+<p>The release notes are handled in Confluence. It is a manual process and it is time consuming. The Jira issues are extracted and post-processed for the final release note. It is glue-on quality - not built-in quality. The release note cannot be generated based on a meta-system like Jira alone. It does not have the source revision time record. Jira issues and releases in Jira do not understand relationship of changes in the SCM system.</p>
+
+<h4 id="design-your-jira-issues-for-data-extraction">Design your Jira issues for data extraction</h4>
+
+<p>It is important to configure you schema in Jira, so it stores all needed information about the logical change. Add a status which tells if it should be listed in the release note. Not every task should be listed in a release note that the end user sees. Add a field for end-user description which can be extracted if public.</p>
+
+<h4 id="generate-different-release-note-for-different-stakeholders">Generate different release note for different stakeholders</h4>
+
+<p>The different stakeholders will have different needs. At least it makes sense to have two generated release notes. One for R&amp;D which is used for meta data quality checks and used to monitor ‘release-readiness’. The second is a public release note which is reporting what external stakeholders need to know. Meaning, which features have been implemented and which publicly known errors have been corrected.</p>
+
+<h3 id="create-your-release-note-as-a-record-of-your-scm-system">Create your release note as a record of your SCM system</h3>
+
+<p>The only correct place to initialize your release note is from your SCM system as it is ‘the’ one and only truth about this particular revision compared to previous revision/releases.</p>
+
+<h3 id="use-a-release-note-generator-based-on-scm-system-m">Use a release note generator based on SCM system (M)</h3>
+
+<p>Given that the systems and process are designed for automation the report can be generated. Any changes to data for the release note is changed/added/removed at the root source of the information. This means that the release note can be regenerate based on the updated data.</p>
+
+<h4 id="add-the-generator-to-the-pipeline">Add the generator to the pipeline</h4>
+
+<p>Add the release note generation to the pipeline. It then becomes artifact as any other product generated as part of the pipeline. It will be an important artifact for the tester and product owner as it shows exact progress of the software for later promotion decisions on this particular revision.</p>
+
+<h4 id="use-the-rd-release-note-as-a-consistency-check-s">Use the R&amp;D release note as a consistency check (S)</h4>
+
+<p>As part of the release gate it is possible to monitor the release readiness where the release DoD is programmed/implemented. This is to harvest traceability and use it as a consistency check.</p>
+
+<p>The consistency checks could look something like the following</p>
+
+<ul>
+  <li>Do all SCM change-sets have a related Jira issue</li>
+  <li>Are all the Jira issues in a correct status</li>
+  <li>Do we have all the changes related to all the Jira issues for this release</li>
+  <li>Do the change sets, based on the Jira issues, have the needed reviews in the correct status</li>
+</ul>
+
+<h3 id="security-review-process-and-documentation-is-manual">Security review process and documentation is manual</h3>
+
+<p>The security review is needed for the safety reaction of the device. Changes to these algorithms are related to a special and mandatory review that needs to be documented and signed-off as part of the release process. The review is not tool-aided and is currently documented in the Jira issue. It is a manual process to gather the reviews to create the document that is signed by the security-officer.</p>
+
+<h4 id="implement-a-solid-review-process-and-automatically-generate-the-documentation">Implement a solid review process and automatically generate the documentation</h4>
+
+<p>It is advised to implement Crucible/FishEye(already available) as the front-end for the review. It handles the statuses of the reviews. Given the data and status is available in the Atlassian suite it is possible to auto generate the review report ready for signature.</p>
+
+<!-- cspell:words Praqmatic -->
+
+<p>An option is to use <a href="https://github.com/Praqma/Praqmatic-Automated-Changelog" title="Praqmatic Automated Changelog" target="_blank">PAC</a> as a foundation, it’s an open source tool that can be extended to also generate the review report.</p>
+
+    
+  
+
+
+              </div>
+            
+          </article>
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="test">Test</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="version-control">Version Control</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="devops">DevOps</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="architecture--design">Architecture &amp; Design</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="organization--culture">Organization &amp; Culture</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+  </div>
+</div>
+

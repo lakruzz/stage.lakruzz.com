@@ -1,0 +1,701 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The DORITH principle - Continuous Delivery Metric Model</title>
+<meta name="description" content="DORITH is a contraction of sentence “DO the RIght THing”. It’s a principle that enables you to make decisions that will appear to be tactical and still allow you to learn as you go.">
+
+
+  <meta name="author" content="Lars Kruse">
+  
+  <meta property="article:author" content="Lars Kruse">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Continuous Delivery Metric Model">
+<meta property="og:title" content="The DORITH principle">
+<meta property="og:url" content="https://codememo.lakruzz.com/stories/the-dorith-principle/">
+
+
+  <meta property="og:description" content="DORITH is a contraction of sentence “DO the RIght THing”. It’s a principle that enables you to make decisions that will appear to be tactical and still allow you to learn as you go.">
+
+
+
+  <meta property="og:image" content="https://codememo.lakruzz.com/assets/images/posts/dorith.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-02-03T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://codememo.lakruzz.com/stories/the-dorith-principle/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Continuous Delivery Metric Model",
+      "url": "https://codememo.lakruzz.com/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Continuous Delivery Metric Model Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="https://kit.fontawesome.com/17b5a92563.js" crossorigin="anonymous"></script>
+
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/lakruzz-logo.png" alt="Continuous Delivery Metric Model"></a>
+        
+        <a class="site-title" href="/">
+          Continuous Delivery Metric Model
+          <span class="site-subtitle">Software as a Factory</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/score/">Score</a>
+            </li><li class="masthead__menu-item">
+              <a href="/gauges/">Gauges</a>
+            </li><li class="masthead__menu-item">
+              <a href="/stories/">Stories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about-model/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">💬</a>
+            </li><li class="masthead__menu-item">
+              <a href="/terms/">🍪</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://codememo.lakruzz.com/">
+        <img src="/assets/images/avatars/lakruzz.png" alt="Lars Kruse" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://codememo.lakruzz.com/" itemprop="url">Lars Kruse</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software is Eating the world - we need more software!</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Copenhagen, Denmark</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:lars@lakruzz.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="tel:+45 2087 2530" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-phone-square" aria-hidden="true"></i><span class="label">Phone</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/lakruzz" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/lakruzz" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The DORITH principle">
+    <meta itemprop="description" content="DORITH is a contraction of sentence “DO the RIght THing”. It’s a principle that enables you to make decisions that will appear to be tactical and still allow you to learn as you go.">
+    <meta itemprop="datePublished" content="2018-02-03T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://codememo.lakruzz.com/stories/the-dorith-principle/" class="u-url" itemprop="url">The DORITH principle
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p class="kicker">DORITH is a contraction of sentence “DO the RIght THing”. It’s a principle that enables you to make decisions that will appear to be tactical and still allow you to learn as you go. Understand the in-situ challenge with  being tactical and start taking small steps in the right direction.</p>
+
+<h2 id="vision-strategy-and-tactics-yadda-yadda-yadda">Vision, strategy and tactics …yadda, yadda, yadda</h2>
+
+<p>It’s well know, that in management and leadership, the terms <em>vision</em>, <em>strategy</em> and <em>tactics</em> are as old as Methuselah. And all though the correlation between the terms and the way they are used does make a lot of sense - in management. It’s also one of those doctrines, that kinda make us immune, isn’t it? When a manager says <em>“Vision, strategy and tactics”</em> we tend to roll our eyes and think <em>“yadda yadda yadda - talk to the hand”</em>.</p>
+
+<h2 id="the-in-situ-problem-with-being-tactical">The in-situ problem with being tactical</h2>
+
+<p><img src="/assets/images/posts/dorith.jpg" alt="DORITH" class="pic left medium" /> I’ve been managing people, for ten years now, and from that point of view it really does seem to be important to ensure, that the everyday work is tactically founded in a strategy that leads to fulfillment of the vision. However, it only makes sense to <em>think</em> like that, it doesn’t make much sense to <em>talk</em> like that.</p>
+
+<p>Here’s an example; When someone walks up to me and ask for advice or priority or mentoring in relation to something very specific that they are currently occupied with. Then it doesn’t make much sense to reply <em>“be tactical about it”</em> although that is technically not a bad reply at all. In reality however, it’s very rare that it resonates with something concrete. It’s usually quite abstract what <em>tactical</em> is in the given context.</p>
+
+<p>Another problem with that technically correct, but in-situ fairly useless reply, is that it ties back to the strategy; Being tactical implies <em>“…according to the strategy”</em> and even worse - being strategic likewise implies <em>“…according to the vision”</em>.</p>
+
+<p>Damn - that means, that as a manager, I need to have a rock solid and well communicated <em>vision</em>, that is manifested in an equally rock solid and well communicated <em>strategy</em> - The truth is, that in <a href="https://www.praqma.com" target="_blank">our company</a>, these strategies are not manifested or rock solid, it’s more that we strive to build them into our corporate culture and that we’re allowing them to be somewhat in flux.</p>
+
+<p>Without these strategies and employee handbooks, I can understand why the encouragement to be <em>tactical</em> leads to the immediate <em>“yadda, yadda, yadda”</em>  thought.</p>
+
+<h2 id="the-agile-manifesto">The Agile manifesto</h2>
+
+<p>It may derive from an occupational hazard; We’re in the software development business and the <a href="https://agilemanifesto.org" target="_blank">agile manifesto</a> tends to be our credo. We honestly believe in motivated and self-organized teams, we believe in meritocracy and we acknowledge that requirements are constantly changing, we believe in technical excellence and in the focus that comes from minimizing work in progress - and we believe in retrospectives and continuous reflections as the primary input for continuous learning. We believe that creating value - such as working software - should be the primary measure of progress.</p>
+
+<p>To me - as a manager who tends to recite from <a href="https://agilemanifesto.org/principles.html" target="_blank">the twelve principles</a> of the Agile Manifesto more frequently than most - the whole vision-strategy-tactics needs a different implementation than the traditional rock solid, well communicated approach.</p>
+
+<p>I simply don’t believe in rock solid.</p>
+
+<h2 id="dorith">DORITH</h2>
+
+<p>The DORITH principle is a different approach. When someone walks up to me and asks for advice, priority or mentoring I tend to reply:</p>
+
+<blockquote>
+  <p><em>“Do the right thing!”</em></p>
+</blockquote>
+
+<p>I feel obliged to not dictate the answer, but instead facilitate that we go and investigate; what is the right thing to do - in the context?</p>
+
+<p>In any context, the right thing to do will obviously be relative to some kind of direction. An obviously good coaching question pops up:</p>
+
+<blockquote>
+  <p><em>“What are you hoping to achieve?”</em></p>
+</blockquote>
+
+<p>Whatever the answer to the question is, it something worth dwelling with for a while, Is it the real thing? What is the rationale behind it? <em>Rationale</em> - that word is one of my all time favorites. It’s definition is <em>“A set of reasons or a logical basis for a course of action or belief”</em>. Back in my time at university when I studied communication I studied with a professor in Philosophy. He’s interpretation of the word was much more poetic: <em>“A person’s rationale is all the ballast that enables that person to resonate, to make decisions”</em>. It’s personal!</p>
+
+<p>So by digging into the underlying, personal rationale, behind why someone is doing something, it suddenly becomes meaningful - to that person.</p>
+
+<p>The answer to your own question lies within your self: You make the right decision, given the context, based on your rationale. - it reads like a poem:</p>
+
+<blockquote>
+  <p>What you don’t have<br />
+You don’t need it now<br />
+What you don’t know<br />
+You can feel somehow<br /></p>
+</blockquote>
+
+<p><em>U2, A Beautiful Day</em></p>
+
+<h2 id="small-steps-manifesto">Small Steps Manifesto</h2>
+
+<p>It’s obvious that a few lines from a U2 pop song can’t hold a magical answer to a complex problem; how to be a successful manger. But I believe that efficient management implies that people on the team are self-organized, motivated and empowered.</p>
+
+<p>The small steps manifesto is still emerging, but it reads something like:</p>
+
+<blockquote>
+  <p><em>Any</em> decision that is conscious and based on a rationale, and which is bringing you one small step closer to what you are hoping to achieve, is by definition a good decision.</p>
+</blockquote>
+
+<p>It’s likely that there might be other decisions someone else could have made, that would have been better in the meaning that they would be even more efficient, but they would have the built-in problem, that they wouldn’t be your’s.</p>
+
+<p>The DORITH principle allows you to learn - it allows you to practice that art of decision making. Find the answer inside yourself, based on your own sense of direction and your own rationale and do <em>something</em>.</p>
+
+<p>It simply allows you to be tactical - relative to where you are headed.</p>
+
+<h2 id="pivot-without-mercy-or-guilt">Pivot without mercy or guilt</h2>
+
+<p>Making decisions based on your own rationale, however conscious they may be, is bound to have some limitations - for all of us. It’s build into the principle, that some of the decisions will doubtlessly be bad or questionable.</p>
+
+<p>Suck it up!</p>
+
+<p>A proverb that’s often cited in LEAN and agile is <em>“pivot without mercy or guilt”</em>. In it’s essence it captures the remedy for how to deal with bad decision: Simply make another decision. Don’t look back, don’t be sorry. Just make another decision, that’s better.</p>
+
+<p>This of course implies, that we discover when we make bad decisions, and the tools for that are retrospectives and continuous reflections.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#agile" class="page__taxonomy-item p-category" rel="tag">agile</a><span class="sep">, </span>
+    
+      <a href="/tags/#lean" class="page__taxonomy-item p-category" rel="tag">LEAN</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2018-02-03T00:00:00+00:00">February 3, 2018</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+DORITH+principle%20https%3A%2F%2Fcodememo.lakruzz.com%2Fstories%2Fthe-dorith-principle%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcodememo.lakruzz.com%2Fstories%2Fthe-dorith-principle%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fcodememo.lakruzz.com%2Fstories%2Fthe-dorith-principle%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+ 
+    <nav class="pagination">
+      
+        <a href="#" class="pagination--pager disabled">Previous</a>
+      
+      
+        <a href="/stories/git-aliases-extreme/" class="pagination--pager" title="Git aliases
+">Next</a>
+      
+    </nav>
+ 
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/pics/ws-0025.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/stories/the-full-assessment/" rel="permalink">The Full Assessment
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Continuous Delivery is to software development what lean is to manufacturing. We strive for Lean Software Development. A one-piece flow with quality built-in.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/octocat_alias.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/stories/git-aliases-extreme/" rel="permalink">Git aliases
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          29 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Git aliases are mostly used for nifty shorthand variants or combinations of existing git commands. But aliases can do anything that you can fit into one line...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/lakruzz" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/lakruzz" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+ <div class="page__footer-copyright">&copy; 2025 Continuous Delivery Metric Model
+    
+      —  Powered by <a href="https://www.lakruzz.com" target="_blank" rel="nofollow">Lakruzz</a></div>
+    
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    <style>
+    #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: 100%; background: #942323; color: rgba(255,255,255,0.8);}
+    #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+<div id="cookie-notice">
+    <span>
+        Say <em>"Yes!"</em> to cookies 
+    </span>
+    <a id="cookie-notice-accept" class="btn btn--success">
+        🍪💪 Yes 
+    </a>
+    &nbsp;&nbsp;We're not evil, we <em>never</em>  track PII data
+    <a href="/terms/" class="btn btn--warning">
+        😈 Read our terms 
+    </a>
+</div>
+
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+        // Remove GTM script from the header
+        var gtmScripts = document.querySelectorAll('script[src*="googletagmanager.com/gtag/js"]');
+        gtmScripts.forEach(function(script) {
+            script.parentNode.removeChild(script);
+        });
+    }
+
+    if(readCookie('cookie-notice-dismissed')=='true') {
+
+        
+        
+    } else {
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-dismissed','true',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
+</script>
+
+    
+  </body>
+</html>

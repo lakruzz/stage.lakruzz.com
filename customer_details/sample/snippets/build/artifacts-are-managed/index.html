@@ -1,0 +1,15 @@
+<!-- markdownlint-disable MD041 -->
+<p><strong><em>Note:<br />The following is a curated mix of illustrative findings from various anonymized reports</em></strong></p>
+
+<h3 id="artifact-management-system-configuration-not-optimal">Artifact management system configuration not optimal</h3>
+
+<p>The setup used in Artifact management is not as the tool is designed and intended for.
+The intended root structure is <em>projects</em> and on top of that a semantic structure with package and semantic version below.
+The current setup abuses the root structure as it is both the project and version which means that newcomers are confused and the root structure is polluted and grows as more releases are produced. The structure you’ve set up requires advanced logic in your build scripts rather than just simple SemVer logic.</p>
+
+<h4 id="implement-best-practice-structure">Implement best practice structure</h4>
+
+<p>Store the artifacts in a hierarchical tree structure.
+It should also be done for non-Java artifacts if there is no explicit reason to not do so.
+Always respect the intent of a tool. Read the manual again, follow some of the tutorials for the tool.
+It will make the automation of the dependency management less complex if there is a consistent structure for addressing the artifacts.</p>

@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/report.css">
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <!--<script src="https://cdn.rawgit.com/dafi/tocmd-generator/master/js/jquery.toc.js"></script>-->
+  <script src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+
+  <!--TODO fetch cdn to local-->
+</head>
+<body>
+
+<div class="page-report">
+  
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <article class="article-front">
+        <h1>Continuous Delivery Assessment</h1>
+        
+          <div class="caption">
+            Report based on workshop and interviews
+          </div>
+        
+        
+<!--<h1>Continuous Delivery Assessment</h1>-->
+<!--<div class="caption">Report based on workshop and interviews</div>-->
+
+<div class="matrix">
+  <div class="matrix-row header" style="margin-left: -92px;">
+    <div class="matrix-cell header">
+    </div>
+    
+      <div class="matrix-cell header header-level">
+        <a href="/levels/novice/#tag" style="opacity: 0.6">Novice</a>
+      </div>
+    
+      <div class="matrix-cell header header-level">
+        <a href="/levels/beginner/#tag" style="opacity: 0.7">Beginner</a>
+      </div>
+    
+      <div class="matrix-cell header header-level">
+        <a href="/levels/intermediate/#tag" style="opacity: 0.8">Intermediate</a>
+      </div>
+    
+      <div class="matrix-cell header header-level">
+        <a href="/levels/advanced/#tag" style="opacity: 0.9">Advanced</a>
+      </div>
+    
+      <div class="matrix-cell header header-level">
+        <a href="/levels/expert/#tag" style="opacity: 1.0">Expert</a>
+      </div>
+    
+  </div>
+  
+    <div class="matrix-row">
+      
+      <div class="matrix-cell header header-area">
+        <span>
+          <a href="/areas/build/#tag" class="area-80" style="background-color:unset;">Build</a>
+        </span>
+      </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-80" style="opacity: 0.6"></div>                      <a href="/automated-builds/">                        Automated builds                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-80" style="opacity: 0.7"></div>                      <a href="/artifacts-are-managed/">                        Artifacts are managed                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-80" style="opacity: 0.8"></div>                      <a href="/automated-release-notes/">                        Automated release notes                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-80" style="opacity: 0.9"></div>                      <a href="/full-trace/">                        Full traceability                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-80" style="opacity: 1.0"></div>                      <a href="/delivery-pipeline/">                        Delivery pipeline                      </a>                    </div>                
+          
+        </div>
+      
+    </div>
+  
+    <div class="matrix-row">
+      
+      <div class="matrix-cell header header-area">
+        <span>
+          <a href="/areas/qa/#tag" class="area-70" style="background-color:unset;">Test</a>
+        </span>
+      </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-70" style="opacity: 0.6"></div>                      <a href="/unit-test/">                        Unit testing, mocks, stubs and proxies                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-70" style="opacity: 0.7"></div>                      <a href="/automated-functional-tests/">                        Automated functional tests                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-70" style="opacity: 0.8"></div>                      <a href="/maintain-test-data/">                        Maintain test data                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-70" style="opacity: 0.9"></div>                      <a href="/adaptive-test-suites/">                        Adaptive test suites                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-70" style="opacity: 1.0"></div>                      <a href="/test-in-production/">                        Test in production                      </a>                    </div>                
+          
+        </div>
+      
+    </div>
+  
+    <div class="matrix-row">
+      
+      <div class="matrix-cell header header-area">
+        <span>
+          <a href="/areas/vcs/#tag" class="area-60" style="background-color:unset;">Version Control</a>
+        </span>
+      </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-60" style="opacity: 0.6"></div>                      <a href="/use-dvcs/">                        Use distributed VCS                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-60" style="opacity: 0.7"></div>                      <a href="/commits-are-tied-to-tasks/">                        Commits are tied to tasks                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-60" style="opacity: 0.8"></div>                      <a href="/release-train-branching-strategy/">                        Release train branching strategy                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-60" style="opacity: 0.9"></div>                      <a href="/version-numbers/">                        Version numbers matter                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-60" style="opacity: 1.0"></div>                      <a href="/pristine-integration-branch/">                        Pristine integration branch                      </a>                    </div>                
+          
+        </div>
+      
+    </div>
+  
+    <div class="matrix-row">
+      
+      <div class="matrix-cell header header-area">
+        <span>
+          <a href="/areas/devops/#tag" class="area-50" style="background-color:unset;">DevOps</a>
+        </span>
+      </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-50" style="opacity: 0.6"></div>                      <a href="/one-team/">                        One Team                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-50" style="opacity: 0.7"></div>                      <a href="/automated-deployment/">                        Automated deployment                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-50" style="opacity: 0.8"></div>                      <a href="/on-demand-environments/">                        Access to production-like environments                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-50" style="opacity: 0.9"></div>                      <a href="/infrastructure-as-code/">                        Infrastructure as code                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-50" style="opacity: 1.0"></div>                      <a href="/live-monitoring-and-feedback/">                        Live monitoring and feedback                      </a>                    </div>                
+          
+        </div>
+      
+    </div>
+  
+    <div class="matrix-row">
+      
+      <div class="matrix-cell header header-area">
+        <span>
+          <a href="/areas/arch/#tag" class="area-40" style="background-color:unset;">Architecture &amp; Design</a>
+        </span>
+      </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-40" style="opacity: 0.6"></div>                      <a href="/code-metrics/">                        Code metrics                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-40" style="opacity: 0.7"></div>                      <a href="/testable-code/">                        Testable code                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-40" style="opacity: 0.8"></div>                      <a href="/dependencies-are-managed/">                        Dependencies are managed                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-40" style="opacity: 0.9"></div>                      <a href="/individually-releasable-components/">                        Individually releasable components                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-40" style="opacity: 1.0"></div>                      <a href="/full-audit-trail/">                        Full audit trail in production                      </a>                    </div>                
+          
+        </div>
+      
+    </div>
+  
+    <div class="matrix-row">
+      
+      <div class="matrix-cell header header-area">
+        <span>
+          <a href="/areas/org/#tag" class="area-20" style="background-color:unset;">Organization &amp; Culture</a>
+        </span>
+      </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-20" style="opacity: 0.6"></div>                      <a href="/agile-process/">                        Agile process                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-20" style="opacity: 0.7"></div>                      <a href="/buy-in-management/">                        Buy-in from management                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-20" style="opacity: 0.8"></div>                      <a href="/tasks-are-groomed/">                        Tasks are groomed                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-20" style="opacity: 0.9"></div>                      <a href="/designated-roles/">                        Designated roles                      </a>                    </div>                
+          
+        </div>
+      
+        <div class="matrix-cell">
+          
+          
+          
+          
+                                <div class="card_">                      <div class="bg area-20" style="opacity: 1.0"></div>                      <a href="/knowledge-transfer/">                        Explicit knowledge transfer                      </a>                    </div>                
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+<div class="columns">
+  <div class="column column-customer">
+    <div class="logo"><img src="/assets/images/lakruzz-logo.svg" alt="sample" style="margin: 0mm 0mm; height: 30px;" /></div>
+    <div class="name">sample</div>
+    <div class="url">https://codemamo.lakruzz.com</div>
+  </div>
+  <div class="column column-author">
+    <div class="logo"><img alt="logo" src="/assets/images/lakruzz-logo.svg" style="margin: 0mm 0mm; height: 30px;; visibility: hidden;" /></div>
+    <img alt="author logo" src="" class="author-logo" />
+    <div class="date">November 24, 2016</div>
+    <div class="author">Author: <strong>Lars Kruse</strong></div>
+    <div class="author">Co-authors: <strong></strong></div>
+  </div>
+</div>
+
+<script>
+  $( document ).ready(function() {
+    $( ".article-front .carousel" ).replaceWith(function() {
+      return $(this).find( ".card_" ).first();
+    });
+  });
+</script>
+
+
+      </article>
+    
+  
+    
+    
+      <article class="article-toc">
+        <h1>Table of Contents</h1>
+        
+          <div class="caption">
+            
+          </div>
+        
+        <!--Rendered from pages/report.html-->
+<div class="toc" data-toc-selectors="h1,h2,h3,h4"></div>
+
+      </article>
+    
+  
+    
+    
+      <article class="article-context">
+        <h1>Context</h1>
+        
+          <div class="caption">
+            Your Awesome Company and the CoDe assessment
+          </div>
+        
+        <p>This report summarizes the findings of a series of workshop conducted in relation to the CoDeMeMo performed for Your Awesome Company on 2024-04-07 00:00:00 +0000.</p>
+
+<p>Here follows a short intro to Your Awesome Company <!--TODO--></p>
+
+<h2 id="the-continuous-delivery-assessment">The Continuous Delivery Assessment</h2>
+
+<p>The interviews and workshops related to the CoDeMeMo has the purpose of getting a complete overview of the organization with specific focus on software development, the tool stack that surrounds and supports it and the processes used to develop, verify, deploy, test and release software.</p>
+
+<p>The goal of the interviews and workshops is two-fold:</p>
+
+<ul>
+  <li>To raise awareness in the software development team of some of the best practice methods, tools and processes available for improving efficiency and producing higher quality software.</li>
+  <li>To outline a roadmap as a practical guide to achieving this goal.</li>
+</ul>
+
+<p>Awareness is achieved by conducting a considerable part of the interviews and workshops and facilitated discussions with the developers in the software team.</p>
+
+<p>The roadmap is manifested in the report you are currently reading.</p>
+
+<h2 id="this-report">This report</h2>
+
+<p>The report is structured around the Continuous Delivery Metric Model which was presented to all participants during the workshop. The chapters in the report reflect the focus areas in the model.</p>
+
+<p>Throughout the report, findings and observations are given their own section header and paragraphs under each section are marked with an up-arrow <strong style="font-family:FontAwesome;"></strong> indicating that it contains a recommended action mitigating an issue. <!--TODO: https://github.com/lakruzz/codememo/issues/42 --></p>
+
+<p>Mitigation’s are tagged with a prioritization (M, S, C or W in parentheses).
+These letters represent the authors opinionated recommendation of priority for the suggested actions.</p>
+
+<p>The lettering refers to the <em>MoSCoW principle</em> for prioritization:</p>
+
+<ul>
+  <li><strong>Must have</strong>
+A condition that must be satisfied in the final solution for the solution to be considered a success.</li>
+  <li><strong>Should have</strong>
+A condition that should be included in the solution if it is possible. A critical condition indeed but not discriminating for success if left out.</li>
+  <li><strong>Could have</strong>
+A condition that could be included if time and resources permit. It is considered desirable but not strictly necessary for success.</li>
+  <li><strong>Won’t have</strong> (not used in this report)
+A condition that is not currently relevant and which will not be implemented but could potentially become relevant in a future scope.</li>
+</ul>
+
+<p>The prioritization that we have come up with is meant to be a catalyst for your internal discussions - you may not agree with our priorities in which case you should obviously go with your own.</p>
+
+<p>Each section is designed as a standalone piece so that the suggested remedies and improvements can be applied independently.
+This approach should enable you to copy most sections marked with <strong style="font-family:FontAwesome;"></strong> directly into JIRA and prioritize them.
+All you need to do hereafter is to groom the task, estimate the work, and put it on your backlog. <!--TODO: https://github.com/lakruzz/codememo/issues/42 --></p>
+
+<!--TODO: add a few pictures from the workshops -->
+
+      </article>
+    
+  
+    
+    
+      <article class="article-summary">
+        <h1>Summary</h1>
+        
+          <div class="caption">
+            Read this if you don't have time to read the entire report
+          </div>
+        
+        <!--TODO: write the analysis -->
+<p><strong><em>Note: the following is a sample summary from an anonymous client</em></strong></p>
+
+<p>In general we were quite impressed with your enthusiasm and commitment at Universal Robots.
+Such level of engagement is a rare sight, and it’s obvious to us that you take pride in your craft.</p>
+
+<p>We found that you have a very high level of technical proficiency and continuously challenge each other, but do so in a very respectful and professional manner. Although it’s quite a challenge running so many workshops in such a short time span, this made running them with you very enjoyable and fruitful.</p>
+
+<p>Some of the things you showcased during the workshops were also rather impressive. The fact that you have implemented quite a battery of automation and improvements as part of everyday work, also shows us that this is something you care for.</p>
+
+<p>In the next chapter, we will go into detail on every observation we’ve made and noted. As not all of you will want to read the entire report cover to cover, this summary is presented as a narrative compilation of recommendations that scored a clean <em>Must Have</em>.</p>
+
+<h2 id="culture-and-organization">Culture and Organization</h2>
+
+<p>Some of your highly engaged teams have already identified many improvements and areas of technical debt. You’ve already got the mindset for the task and had already identified many of the common issues we usually encounter during these workshops. <em>“It’s like an aircraft engine. You need to do the maintenance to keep it in the air”</em> was an apt analogy you brought up. This is a great start, you understand the need to continuously take care of your asset.</p>
+
+<p>However, your current approach was also described as an ad-hoc <em>“boy scout”</em> approach. Meaning you do the right thing by making improvements as you identify them. It creates hidden effort and can actually create more debt than it fixes.
+The approach to maintaining your asset needs to go to the shop, it needs to be analyzed and planned. Create them as issues in Jira, theme them, <strong>commit</strong> to doing them as part of your sprints and measure your progress. You have technical leads for the main subsystems. They should be driving this in a planned and organized manner.</p>
+
+<p>There is also a certain level of acceptance towards manual testing from a cultural perspective. This means that tacking quality on is, to a degree, accepted. We think you should start with promoting testing to a first class citizen in the development process.
+There will always be some form of manual validation, but you want to ingrain testing as an <em>automated</em> process into your culture, as manual testing is inefficient. You can only do this if you implement some form of test management and define a strategy that will enable effective, flexible and scalable tests. This test strategy needs to be embedded into your culture and organization.</p>
+
+<p>Code reviews should <strong>not</strong> be used for verification and should only be done after all automated verification has run. The best code reviews are those that check code semantics, often involving people with specific domain knowledge. Consider if pair programming is an option, which can be easily planned up front and helps creating cross-functional teams.</p>
+
+<p>The last thing we’d like to highlight is the existence of team subcultures. Some of it may be domain pride, which is quite okay, but it seems to be partially driven misaligned processes across the teams, causing friction. Your branching strategies are a good example of this. How you develop software affects how you interact with each other. Aligning your important processes, like branching, versioning and test approach will give you a lot of value. At the end of the day you are delivering <em>one product</em> to the customer.</p>
+
+<h2 id="tests">Tests</h2>
+
+<p>First and foremost, you need to get your tests under control. As it stands, they are really slowing you down and causing unwanted side effects such as long feedback loops, unstable pipelines, etc. The result is that the value of your pipelines are degrading, eventually leading to red builds being ignored.</p>
+
+<p>We suggest you start by stabilizing the automated tests you already have. Valuable tests need to be fixed, while redundant tests need to be removed.</p>
+
+<p>Focus on defining and implementing a test strategy and building up an inventory of tests. Follow best practice as far as the test pyramid goes. Rotating your pyramid 90° clockwise will give you a solid idea of when to run which tests in your pipeline.</p>
+
+<p>Currently, your functional tests, also referred to as E2E, are being executed prior to the aggregated UR upgrade package. This is what you actually want to run such a high level of tests on. As functional tests are inherently more complex, they also affect the feedback loop, so run them after the first level of feedback is given to developers. In addition, consider running the tests in parallel where possible.</p>
+
+<h2 id="version-control-system">Version Control System</h2>
+
+<p>You need to move to Git. Subversion is simply too bulky and inflexible for a real CI/CD approach. It doesn’t do branching and merging very well, which you will be doing <em>a lot</em> in an automated release train workflow.</p>
+
+<p>This is one thing we really feel you should focus on. You need to start defining your migration strategy.</p>
+
+<p>You also need a defined branching strategy that supports a CI/CD and release train approach. This branching strategy should be the same across all the teams. This will enable automation and CI/CD by doing automated verification as a toll gate for entering the integration (main) branch. You want logical commits, which are automatically verified on branches and automatically merged into the integration branch.</p>
+
+<h2 id="architecture">Architecture</h2>
+
+<p>Large monolithic code bases, which take a long time to build and validate do not play well with CI/CD, regardless of the VCS or branching strategy chosen. A lot of the perceived problems are rooted in this: the complex build system, implicit dependencies, slow builds, etc. This is by far your biggest and most daunting task, but it is the one that will give the most value. We’re pretty sure we are preaching to the choir here. You want a more modular, loosely architecture.</p>
+
+<p>PolyScope has some monolithic tendencies. Notable, there’s a single JAR that’s composed of 80% of the PolyScope code. You should investigate a more modular approach.</p>
+
+<p>There is a tight coupling between PolyScope and the Controller. This can be loosened by splitting the dependency out into its own versioned and controlled artifact. An added benefit is that you’ll be able to manage the public API explicitly.</p>
+
+<p>Breaking down your architecture into modules and creating individual pipelines for them implies you’ll need a structured and cohesive approach to dependency management and releases. Though we sadly didn’t have the time to dig deeply into this area, we know you are aggregating your dependencies in the firmware subsystem and the UR upgrade package. This means that you are <em>already</em> doing dependency management, you just need to make sure it is a cohesive approach where you can automate the creation of a versioned release from a branch and identify the dependency from the version. This is what the version, release and branching strategies will give you. The ability to automate the process.</p>
+
+<h2 id="builds">Builds</h2>
+
+<p>One of your biggest pains right now is your unstable integration branch (trunk).
+The main drivers behind this are the lack of a cohesive branching strategy, unreliable tests and the absence of an automated toll gate.
+Start by setting up a toll gate to your integration branch.
+Define what makes code <em>good enough</em> to share with colleagues, e.g. can compile and run unit tests, and set this up as a barrier into the mainline.<br />
+Once development is done solely on topic branches and the automated toll gate is the only way into the mainline, you will have a stable trunk.</p>
+
+<p>The build script looks to be a point of friction as it’s an attempt to combine some of the subsystem builds due to dependencies.
+The shell script is a pre-step, followed by Maven and SCons to build the subsystems.
+This is in reality just a reaction to the coupling between PolyScope and the Controller.
+The result is a slow feedback loop. This pre-step should be handled as a <em>dependency</em> instead of a <em>build requirement</em>, so you won’t have to build needlessly.</p>
+
+<p>At least once, during the workshop, it was stated that not all of the build setup was found in scripts, but it was located <em>somewhere</em> in Jenkins.
+We have extrapolated this to mean the pipeline definitions. Your pipeline definitions are separate from the code.
+As a result, it is difficult for developers to get an overview of what they need to control.
+You need to build a better separation of concerns here.
+The DevOps team should provide the pipeline framework while the domain specific configuration should live in the repositories.
+The developers should be able to control what to build, which suite of tests to execute, etc. while the framework should just ensure that the definition of done <strong>is</strong> executed.</p>
+
+<p>You need to push your pipeline into <em>Front Office</em>.
+The tests that are being done, or triggered manually, on the UR upgrade package should be part of a pipeline and the final image given to the customer needs to be generated as well.
+In reality your final automated tests should be done on the <em>generated</em> image.
+In general there are too many manual steps in the <em>Front End</em> release process.
+You should focus on automating these to the extent possible.</p>
+
+<h2 id="devops">DevOps</h2>
+
+<p>It is quite evident that this has been an area of focus, a lot of work has been put into it and quite a lot of benefits have already been reaped.
+However, you have a low <em>bus factor</em> here. Therefore we would recommend that some effort be put into opening up the <em>information bottleneck</em>.
+DevOps, obviously, wants and needs a certain amount of control. But there is a fine balance between control and flexibility.</p>
+
+<p>There are a couple of findings that have to do with resource management, both hardware and human resources.
+We recommend you take a closer look at how you manage both of these.
+Ask yourself what the best strategy for scalability from a hardware perspective is.
+Is it really fewer, more powerful, machines, or does the problem lay somewhere else?
+The one Windows build machine is an obvious bottleneck but you should make sure you identify the core problem.</p>
+
+<p>Should the DevOps team really be maintaining the Jira and Confluence instances?
+We recommend that you shift such tasks away from the DevOps team and have them focus on feedback times, pipeline structure, automation, access to <strong>more</strong> production like environments, etc.
+The DevOps team should still own the <em>‘how’</em>, i.e. the process flows, but shouldn’t have to deal with the installations.</p>
+
+<p>Get the last pieces in place as far as your present infrastructure is concerned.
+You’re utilizing Docker images, which is great. Many organizations are far from containerization.
+But the base images are being built constantly. This means that they <em>could</em> move under your feet.
+Consider bringing Docker Registry into the picture.</p>
+
+<p>Your environments should be managed as code.
+Start to make this a reality with a CMS like Ansible, Chef, Puppet, or whichever you choose.
+Use these <em>clean</em> environments as much as possible. Why could they not be the basis for developers environments?</p>
+
+<h3 id="a-high-level-road-map">A high level road map</h3>
+
+<p>For a high level road map of our recommendations, we’d suggest the following:</p>
+
+<ol>
+  <li>Move to Git and start using a branching strategy that supports a release train workflow.</li>
+  <li>Define and implement your toll gate into the integration branch.</li>
+  <li>Stabilize your integration branch and react when it goes unstable.</li>
+  <li>Define and implement your test strategy.</li>
+  <li>Start chewing away at that elephant! Break the monolith down with an iterative approach. It’s too big to eat in one sitting.</li>
+  <li>Automate <em>Front Office</em>’s manual processes and put them into a pipeline.</li>
+</ol>
+
+      </article>
+    
+  
+    
+    
+      <article class="article-score">
+        <h1>Scores</h1>
+        
+          <div class="caption">
+            The cards scores based on the workshop exercise
+          </div>
+        
+        <p>During the individual workshops for each area, we do an exercise where the participants evaluate and score the five cards that belong to the area.
+Through six workshops over two days we ended up scoring all 30 cards in the model.</p>
+
+<p>The participants were split into smaller groups of 3-4 people, and each group was given one card to score.
+The exercises was to discuss the best-practice described on each card and score them in terms of the four
+<a href="/gauges/" target="_blank">gauges</a> throughput, feedback, payback and simplicity.</p>
+
+<p>After scoring the cards each group presented their scoring briefly, and the rest of the group had the option to affect or discuss it, if they found a need for it.</p>
+
+<!--TODO: add pictures from the workshop -->
+
+<p>Throughput, feedback and payback are added together and multiplied by simplicity to calculate the total score on each card.</p>
+
+<p>All the cards that got a score are listed in the following:</p>
+
+<section class="scores layout-card">
+  
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <div class="card-row">
+        <div class="card-header">
+          
+          <div class="card_">
+            Artifacts are managed
+            <div class="bg" style="border-color: #424242; opacity: 0.7;"></div>
+          </div>
+          <div class="details">
+            <div class="gauges">
+              <div class="gauge">Throughput 
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+</div>
+              <div class="gauge">Feedback   
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+  </div>
+              <div class="gauge">Payback    
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+   </div>
+              <div class="gauge">Complexity 
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> </span>
+</div>
+              <div class="score">
+                Score
+                <span class="value">6</span>
+              </div>
+            </div>
+          </div>
+          <div class="caption">
+            Are you building that over and over and over again?
+          </div>
+        </div>
+        <div class="second-column">
+          <div class="tags model-tags">
+            <div class="tag model-tag area">
+                          Build
+              <div class="bg" style="border-color: #424242;"></div>
+            </div>
+            <div class="tag model-tag level">
+              Beginner
+              <div class="bg" style="border-color: #444; opacity: 0.7;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <div class="card-row">
+        <div class="card-header">
+          
+          <div class="card_">
+            Automated builds
+            <div class="bg" style="border-color: #424242; opacity: 0.6;"></div>
+          </div>
+          <div class="details">
+            <div class="gauges">
+              <div class="gauge">Throughput 
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+</div>
+              <div class="gauge">Feedback   
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> </span>
+  </div>
+              <div class="gauge">Payback    
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+   </div>
+              <div class="gauge">Complexity 
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+</div>
+              <div class="score">
+                Score
+                <span class="value">7</span>
+              </div>
+            </div>
+          </div>
+          <div class="caption">
+            Yes. But it doesn't build on THAT machine.
+          </div>
+        </div>
+        <div class="second-column">
+          <div class="tags model-tags">
+            <div class="tag model-tag area">
+                          Build
+              <div class="bg" style="border-color: #424242;"></div>
+            </div>
+            <div class="tag model-tag level">
+              Novice
+              <div class="bg" style="border-color: #444; opacity: 0.6;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <div class="card-row">
+        <div class="card-header">
+          
+          <div class="card_">
+            Automated release notes
+            <div class="bg" style="border-color: #424242; opacity: 0.8;"></div>
+          </div>
+          <div class="details">
+            <div class="gauges">
+              <div class="gauge">Throughput 
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> </span>
+</div>
+              <div class="gauge">Feedback   
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+  </div>
+              <div class="gauge">Payback    
+
+<span class="stars"><span class="s_empty"><i class="fa fa-star-o"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+   </div>
+              <div class="gauge">Complexity 
+
+<span class="stars"><span class="s_filled"><i class="fa fa-star"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> <span class="s_empty"><i class="fa fa-star-o"></i></span> </span>
+</div>
+              <div class="score">
+                Score
+                <span class="value">5</span>
+              </div>
+            </div>
+          </div>
+          <div class="caption">
+            If it's boring - automate it. Release notes are boring.
+          </div>
+        </div>
+        <div class="second-column">
+          <div class="tags model-tags">
+            <div class="tag model-tag area">
+                          Build
+              <div class="bg" style="border-color: #424242;"></div>
+            </div>
+            <div class="tag model-tag level">
+              Intermediate
+              <div class="bg" style="border-color: #444; opacity: 0.8;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  <script>
+  $( document ).ready(function() {
+  $(".scores>.card-row").sort(sort_li).appendTo('.scores');
+  function sort_li(a, b){
+    return parseInt($(b).find('.score>.value').text(), 10) > parseInt($(a).find('.score>.value').text(), 10) ? 1 : -1;
+  }
+  });
+  </script>
+</section>
+
+<!--TODO: write the analysis -->
+<p><strong><em>Note: the following is a sample analysis from an anonymous client</em></strong></p>
+
+<h2 id="analysis">Analysis</h2>
+
+<p>The majority of the cards received some type of score in the value gauges. With the exception of the following</p>
+
+<ul>
+  <li>Automated release notes - received zero on payback</li>
+  <li>Test in production - received zero on throughput</li>
+  <li>Commits are tied to tasks - received zero on payback</li>
+  <li>Version numbers - received zero on throughput</li>
+</ul>
+
+<p>It could be beneficial to revisit the cards, which you scored a zero in one of the value gauges, after reading this report.
+It might have given you inspiration to find the benefits from a holistic view.</p>
+
+<h3 id="low-hanging-fruits">Low hanging fruits</h3>
+
+<p>The scoring algorithm favors the simplicity gauge, putting easy-to-implement solutions higher up on the list.</p>
+
+<p>This is a deliberate choice, as it helps identify the aptly named “low-hanging fruits” - ideas that should provide <em>easy wins</em> with high value.
+These are perfect issues to get started with as the quick gains often help you down the road and help motivate the organization to tackle its bigger, harder-to-solve pains.</p>
+
+<p>Looking at your self-assessment, a few cards stood out:</p>
+
+<ul>
+  <li>Buy-in from management</li>
+  <li>Pristine integration branch</li>
+  <li>Release train branching strategy</li>
+</ul>
+
+<p><em>Buy-in from management</em> scored a 24 in the <em>Organization and Culture</em> category. You have evaluated this quite high in throughput and feedback.
+You gave it two stars for payback and feel it is simple to implement. We agree with this self assessment.
+We feel this is directly related to <em>how</em> you are going about paying off technical debt and implementing tasks to improve the way you work.
+Not so much as to whether you are allowed to. More about the approach of making it visible, organizing it better and planning it.
+This score is only a few points from being the <em>ultimate low hanging fruit</em>.</p>
+
+<p><em>Pristine integration branch</em> scored a 21 in the <em>Version Control</em> category. You have evaluated this as something that
+is easy to implement but gives fairly high value in feedback and throughput while affecting the architecture quite heavily.
+This is a good view, and to some extent, will not be the most difficult task of the results from this assessment.
+It might be a little more difficult than you anticipate. You need to align the definition of done across the teams and
+get the tooling, a DVCS for example, in place before this can be achieved effectively. Keep in mind that you want to make
+sure you <strong>do not</strong> impede the pace of the team with the automated toll gate. This could be slightly more complex than at
+first glance due to build and architectural dependencies.</p>
+
+<p><em>Release train branching strategy</em> scored an 18 in the <em>Version Control</em> category. This was assessed as being easy to implement,
+while giving a high value of throughput and fairly high value on feedback. It is interesting is that you gave it only one
+star for <em>Payback</em>. If you keep in mind the requirements a release train will impose on test-ability, trace-ability and
+maintain-ability, you may find that the value return is bigger here than you initially believe.</p>
+
+<p>Falling back to the cards that score high with two stars in simplicity we get:</p>
+
+<ul>
+  <li>Code metrics - scored a 16 in <em>Architecture and Design</em> category.</li>
+  <li>Dependencies are managed - scored a 16 in <em>Architecture and Design</em> category.</li>
+</ul>
+
+<p>The code metrics are a sure win and, in reality, should be part of your toll gate to get in to the integration branch.
+It can, generally, be kept fast and give definitive feedback.</p>
+
+<p>The dependency management, on the other hand, will be pretty heavily related to what you already have implemented in this area.
+We know you have some dependency management from Maven. But what about the other technologies in play? How about an aligned
+version strategy that will support dependency management of releases in a good way? There are some rather hard relations
+to the architecture across the technologies here. This might, in reality, be a two in simplicity instead of a one?</p>
+
+<h3 id="biggest-blockers">Biggest blockers</h3>
+
+<p>Another thing we look for are your major pain points.</p>
+
+<p>Judging the self-assessment scores, we now look further down the list for cards that were judged as very hard to implement
+but giving huge benefits when done.</p>
+
+<p>These are cards that score high in <em>throughput</em>, <em>feedback</em> and <em>payback</em> but only a one in <em>simplicity</em> - indicating
+that they are difficult to implement.</p>
+
+<p>There are three cards that stand out here.</p>
+
+<ul>
+  <li>Explicit knowledge transfer</li>
+  <li>Delivery Pipeline</li>
+  <li>Testable code</li>
+</ul>
+
+<p>The <em>Explicit knowledge transfer</em> scored a 9 in <em>Organization and Culture</em> category. A full three stars in <em>Throughput</em>, <em>Feedback</em> and <em>Payback</em>.
+But is perceived to be very difficult. This assessment is probably due to the <strong>hero</strong> factor which is exhibited at UR.
+There is also a bit of a low bus factor in the DevOps team, but our clear impression is the difficulty lays with the system complexity and architecture.
+Meaning it is hard to get an overview of the dependencies and how changes may affect the system.</p>
+
+<p>But the same may also be said about the <em>Delivery Pipeline</em> self assessment. This card scored a 9 in <em>Build</em> category.
+Again a full three stars across the value gauges but is perceived to very difficult to implement.
+It is, most likely, also rooted in the system complexity, architecture and dependencies.</p>
+
+<p>Your self assessment on <em>Testable code</em> scored an 8 in <em>Architecture and Design</em> category. Only a two in the <em>Throughput</em>
+but a full three in the other two value gauges, while still being perceived as difficult to implement.
+This is a bit harder to analyze without really looking into the automated tests and the code itself.</p>
+
+<p>Looking at the three blockers that stand out.
+We could imagine, that we see a <strong>red thread</strong> leading back to the system complexity, architecture and dependencies. What do you think?</p>
+
+<h3 id="outliers">Outliers</h3>
+
+<p>There was one self assessment that we wanted to highlight which did not fit into either low hanging fruits or blockers.</p>
+
+<ul>
+  <li>Use distributed VCS</li>
+</ul>
+
+<p><em>Use distributed VCS</em> scored a 6 in the <em>Version Control</em> category. You scored it a three for <em>Throughput</em>, a two for <em>Feedback</em> and a one for <em>Payback</em>. You perceived it as being difficult to implement. The result is that it does not end as either a low hanging fruit nor a blocker. However, we feel, you will find it difficult to implement an effective branching strategy that will help you in achieving a pristine integration branch in a CI/CD environment without moving to a DVCS. We think the <em>Payback</em> may be higher than a one.</p>
+
+<h3 id="our-picks-for-you">Our picks for you</h3>
+
+<p>If we look at where our focus has been, and where you have self identified the most findings with high priority it falls in the following 7 cards, minus the <em>Explicit knowledge transfer</em>.</p>
+
+<ul>
+  <li>Buy-in from management</li>
+  <li>Pristine integration branch</li>
+  <li>Release train branching strategy</li>
+  <li>Code metrics</li>
+  <li>Dependencies are managed</li>
+  <li>Delivery Pipeline</li>
+  <li>Testable code</li>
+</ul>
+
+<p>Your own picks regarding a release train branching strategy, and a pristine integration branch really fit well with where we could see you putting your focus to start. With the addition of:</p>
+
+<ul>
+  <li>Use a distributed VCS</li>
+</ul>
+
+<p><em>Dependencies are managed</em> and a <em>Delivery pipeline</em> also fit well with what we would recommend starting with. Mainly because we think it will give a good starting point for <em>eating the elephant</em> as we like to call it. We would also like to point out that the move to a distributed VCS could also help in this regard. It could give you the opportunity to <em>discover</em> implicit dependencies. See our solution <em>Split them with an automated approach</em> under the finding regarding <em>Current VCS</em>.</p>
+
+<p>We left out the <em>Explicit knowledge transfer</em> because we feel it is a very difficult blocker to deal with presently. But also because we think that it will be less difficult as you make the, planned, incremental improvements. As you eat the elephant, institute a release train branching strategy, etc, there will be less of a need for hero’s.</p>
+
+      </article>
+    
+  
+    
+    
+      <article class="article-findings">
+        <h1>Findings</h1>
+        
+          <div class="caption">
+            The findings and observations, including their mitigation, recommendations and prioritization
+          </div>
+        
+        <p>The findings and recommendations have mainly been picked up throughout the interviews and workshops. We conducted this part as targeted group interviews focusing on the 6 main areas of the metric model.</p>
+
+<p>On the first day, after the initial Continuous Delivery presentation, we had an exercise where all attendees together were asked to illustrate the process from the point where a requirement or a change request arrives until the implemented result can be accessed by the end-users.</p>
+
+<p>The participants were also equipped with stickers with 6 different pictograms representing: Wait state, unplanned work, manual work, conflicts, queued work and anything that needs repair.</p>
+
+<p>The result was discussed during the workshop and then used as a reference point during the various discussions on the following day.</p>
+
+<!--TODO: add a picture from the workshop -->
+
+<h2 id="build">Build</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+          
+          <article>
+            
+            
+              <div class="content layout-card">
+                
+                
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+      <!-- markdownlint-disable MD041 -->
+<p><strong><em>Note:<br />The following is a curated mix of illustrative findings from various anonymized reports</em></strong></p>
+
+<h2 id="it-builds-on-my-machine">It builds on <em>my</em> machine</h2>
+
+<p>Builds and tests run on individual developer’s self-maintained machines and workspaces, as no standard image for this exists.
+This results in an undesirable <em>“Well, it works on my machine”</em> scenario. One developer can have a hard time redoing another developer’s work. The team suffers from a lot of <em>false negatives</em>. Builds fail often. Not because the code is broken, but because the build environment is.</p>
+
+<h3 id="use-a-clean-standardized-image-for-the-toll-gate-job">Use a clean standardized image for the toll gate job</h3>
+
+<p>Code changes should be built and tested on a standard and <em>clean</em> image. The image should be maintained by the team.
+This prevents local configuration from tampering with the builds, making them deterministic and consistent.</p>
+
+<h4 id="developers-use-reference-image">Developers use reference image</h4>
+
+<p>Ideally, there should be no difference between a developer’s environment and that of the toll gate.
+This is achieved by making it easy for developers to spin up the standard image to run their builds, allowing them to <a href="/on-demand-environments/" title="Access to production-like environments">easily produce the same result</a> as the toll gate job.</p>
+
+<h2 id="final-delivery-to-customer-is-not-automated">Final delivery to customer is not automated</h2>
+
+<p>The image given to the customer is generated before final test in a non-reproducible way.
+It is built manually based on an already running device with an other, older image.
+It is modified by manipulating files within the device before a final image snapshot.
+Conceptually the image could be broken during the creation process.</p>
+
+<h3 id="automate-image-creation">Automate image creation</h3>
+
+<p>Any release artifact should always be possible to reproduce without any doubt.
+It should be scripted 100%. Programmable and immutable.</p>
+
+<h3 id="make-the-image-generation-stateless">Make the image generation stateless</h3>
+
+<p>A product to a customer should always be generated from scratch in order not to propagate error prone states.
+It should also always be reproducible through a declarative pipeline.</p>
+
+<h4 id="automatically-test-the-image">Automatically test the image</h4>
+
+<p>The automatically generated image is tested as part of a pipeline.
+You want to extend the pipeline as far down the release process as possible.</p>
+
+<h2 id="release-process-is-to-a-large-extent-manual">Release process is, to a large extent, manual</h2>
+
+<p>The majority of the release process located in the <em>Front Office</em> is a manual one, which is costly, lengthy and error prone, e.g. the image creation, release notes, support site updates, etc.</p>
+
+<h3 id="design-the-release-process-for-automation">Design the release process for automation</h3>
+
+<p>It is important that each step is designed for automation.
+Make sure the physical resource are available and enabled for automatic deployment.
+It relates to servers, but also devices that they can be claimed, started and the execution evaluated.</p>
+
+<h3 id="script-each-single-step-to-enable-automatic-execution">Script each single step to enable automatic execution</h3>
+
+<p>Identify the process steps that are manual, entirely or even partially so.
+Automate step by step and integrate them into the pipeline.</p>
+
+<h2 id="build-script-is-an-plaster-on-the-monolith">Build script is an plaster on the monolith</h2>
+<!-- cspell:ignore Scons -->
+<p>The build script is created to handle the monolith by plastering each of the subsystem builds into a single step.
+The different subsystems have different build technologies (e.g. Maven and Scons), but in order to make it all work as a monolith it is wrapped with shell script.</p>
+
+<h3 id="split-the-monolith-and-add-dependency-management-of-the-artifacts">Split the monolith and add dependency management of the artifacts</h3>
+
+<p>Splitting the monolith into subsystems and implementing true dependency management makes the build script obsolete.
+It simply vanishes. Please refer to the <a href="/areas/arch/#tag" title="Architecture &amp; Design">architecture cards</a> for more information.</p>
+
+<h3 id="localization-files-are-introduced-late-in-the-release-process-leading-to-unexpected-ui-changes">Localization files are introduced late in the release process, leading to unexpected UI changes</h3>
+
+<p>Localized text in the UI can cause the UI controls to change in some unexpected manner, e.g. resizing of buttons due to translated texts being longer than their original.
+<em>Commit-stop</em> is the point where no further features, and thus no new text, gets added.
+Translation can take up to one month and arrives fairly late in the release process.</p>
+
+<h4 id="create-requirements-for-localization-subcontractor">Create requirements for localization subcontractor</h4>
+
+<p>Create criteria or a framework that helps these text translators adhere to font type, font size, etc.
+This gives them the opportunity to react early and discuss with you any problematic translations.</p>
+
+<p>This will minimize, or even completely avoid, nasty surprises near the end of the release process.</p>
+
+<h3 id="manual-process-to-create-a-buildable-workspace">Manual process to create a buildable workspace</h3>
+
+<p>It is not possible to start building from a clean checkout.
+You have to checkout two repositories and create a symlink in order to be able to build the software.
+It is a hidden dependency.</p>
+
+<h4 id="make-the-link-permanent-by-using-a-explicit-dependency">Make the ‘link’ permanent by using a explicit dependency</h4>
+
+<p>Create a ‘thin shell’ repository which contains the dependency between these repositories.
+In SVN it is called an <em>external</em>, in Git it is called <em>submodules</em>.
+You could also pull the dependencies from Artifact Management system if the repositories have their own pipeline and definition of done.
+The implementation depends on the technology. The important point is the dependencies are managed and versioned.</p>
+
+<h3 id="the-pipeline-scripts-contain-domain-specific-logic">The pipeline scripts contain domain specific logic</h3>
+
+<p>Your pipeline scripts are bloated with domain specific logic and setup.
+Much of the script relates to setting up environments and requirements to build the software.
+The pipeline scripts become large and unmanageable.</p>
+
+<h4 id="keep-domain-logic-out-of-pipeline-scripts">Keep domain logic out of pipeline scripts</h4>
+
+<p>Consider your pipeline definition as <em>configuration</em> rather than <em>a script</em> to help keep it lean.
+Avoid building logic into the pipeline script that has nothing to do with either CI system’s interface, execution or reporting.
+Remember that all the logic you put in these scripts is also something developers would need to run at their desk, should they want to recreate runs locally.
+The pipeline script makes for a poor place to document these setup steps</p>
+
+    
+  
+
+  
+  
+    
+    
+  
+
+
+              </div>
+            
+          </article>
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+          
+          <article>
+            
+            
+              <div class="content layout-card">
+                
+                
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+      <!-- markdownlint-disable MD041 -->
+<p><strong><em>Note:<br />The following is a curated mix of illustrative findings from various anonymized reports</em></strong></p>
+
+<h3 id="artifact-management-system-configuration-not-optimal">Artifact management system configuration not optimal</h3>
+
+<p>The setup used in Artifact management is not as the tool is designed and intended for.
+The intended root structure is <em>projects</em> and on top of that a semantic structure with package and semantic version below.
+The current setup abuses the root structure as it is both the project and version which means that newcomers are confused and the root structure is polluted and grows as more releases are produced. The structure you’ve set up requires advanced logic in your build scripts rather than just simple SemVer logic.</p>
+
+<h4 id="implement-best-practice-structure">Implement best practice structure</h4>
+
+<p>Store the artifacts in a hierarchical tree structure.
+It should also be done for non-Java artifacts if there is no explicit reason to not do so.
+Always respect the intent of a tool. Read the manual again, follow some of the tutorials for the tool.
+It will make the automation of the dependency management less complex if there is a consistent structure for addressing the artifacts.</p>
+
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+  
+
+
+              </div>
+            
+          </article>
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+          
+          <article>
+            
+            
+              <div class="content layout-card">
+                
+                
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+    
+      <!-- markdownlint-disable MD041 -->
+<p><strong><em>Note:<br />The following is a curated mix of illustrative findings from various anonymized reports</em></strong></p>
+
+<h3 id="release-notes-are-manually-created">Release Notes are manually created</h3>
+
+<p>The release notes are handled in Confluence. It is a manual process and it is time consuming. The Jira issues are extracted and post-processed for the final release note. It is glue-on quality - not built-in quality. The release note cannot be generated based on a meta-system like Jira alone. It does not have the source revision time record. Jira issues and releases in Jira do not understand relationship of changes in the SCM system.</p>
+
+<h4 id="design-your-jira-issues-for-data-extraction">Design your Jira issues for data extraction</h4>
+
+<p>It is important to configure you schema in Jira, so it stores all needed information about the logical change. Add a status which tells if it should be listed in the release note. Not every task should be listed in a release note that the end user sees. Add a field for end-user description which can be extracted if public.</p>
+
+<h4 id="generate-different-release-note-for-different-stakeholders">Generate different release note for different stakeholders</h4>
+
+<p>The different stakeholders will have different needs. At least it makes sense to have two generated release notes. One for R&amp;D which is used for meta data quality checks and used to monitor ‘release-readiness’. The second is a public release note which is reporting what external stakeholders need to know. Meaning, which features have been implemented and which publicly known errors have been corrected.</p>
+
+<h3 id="create-your-release-note-as-a-record-of-your-scm-system">Create your release note as a record of your SCM system</h3>
+
+<p>The only correct place to initialize your release note is from your SCM system as it is ‘the’ one and only truth about this particular revision compared to previous revision/releases.</p>
+
+<h3 id="use-a-release-note-generator-based-on-scm-system-m">Use a release note generator based on SCM system (M)</h3>
+
+<p>Given that the systems and process are designed for automation the report can be generated. Any changes to data for the release note is changed/added/removed at the root source of the information. This means that the release note can be regenerate based on the updated data.</p>
+
+<h4 id="add-the-generator-to-the-pipeline">Add the generator to the pipeline</h4>
+
+<p>Add the release note generation to the pipeline. It then becomes artifact as any other product generated as part of the pipeline. It will be an important artifact for the tester and product owner as it shows exact progress of the software for later promotion decisions on this particular revision.</p>
+
+<h4 id="use-the-rd-release-note-as-a-consistency-check-s">Use the R&amp;D release note as a consistency check (S)</h4>
+
+<p>As part of the release gate it is possible to monitor the release readiness where the release DoD is programmed/implemented. This is to harvest traceability and use it as a consistency check.</p>
+
+<p>The consistency checks could look something like the following</p>
+
+<ul>
+  <li>Do all SCM change-sets have a related Jira issue</li>
+  <li>Are all the Jira issues in a correct status</li>
+  <li>Do we have all the changes related to all the Jira issues for this release</li>
+  <li>Do the change sets, based on the Jira issues, have the needed reviews in the correct status</li>
+</ul>
+
+<h3 id="security-review-process-and-documentation-is-manual">Security review process and documentation is manual</h3>
+
+<p>The security review is needed for the safety reaction of the device. Changes to these algorithms are related to a special and mandatory review that needs to be documented and signed-off as part of the release process. The review is not tool-aided and is currently documented in the Jira issue. It is a manual process to gather the reviews to create the document that is signed by the security-officer.</p>
+
+<h4 id="implement-a-solid-review-process-and-automatically-generate-the-documentation">Implement a solid review process and automatically generate the documentation</h4>
+
+<p>It is advised to implement Crucible/FishEye(already available) as the front-end for the review. It handles the statuses of the reviews. Given the data and status is available in the Atlassian suite it is possible to auto generate the review report ready for signature.</p>
+
+<!-- cspell:words Praqmatic -->
+
+<p>An option is to use <a href="https://github.com/Praqma/Praqmatic-Automated-Changelog" title="Praqmatic Automated Changelog" target="_blank">PAC</a> as a foundation, it’s an open source tool that can be extended to also generate the review report.</p>
+
+    
+  
+
+
+              </div>
+            
+          </article>
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="test">Test</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="version-control">Version Control</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="devops">DevOps</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="architecture--design">Architecture &amp; Design</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+  </div>
+</div>
+
+<h2 id="organization--culture">Organization &amp; Culture</h2>
+
+<div class="findings layout-tag">
+  <div class="content">
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+
+        
+        
+        
+      
+    
+  </div>
+</div>
+
+
+      </article>
+    
+  
+</div>
+
+<!--Should be called after all headers rendering-->
+<!--TODO move to separate js-->
+<script>
+  var tocSelectors = $('.article-toc .toc').data('toc-selectors');
+  console.log("tocSelectors = " + tocSelectors);
+  if(!tocSelectors){
+    tocSelectors = 'h1,h2,h3,h4'
+  }
+  $('.article-toc .toc').toc({
+    'selectors': tocSelectors, //elements to use as headings
+});
+</script>
+
+</body>
+</html>
